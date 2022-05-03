@@ -1,3 +1,5 @@
+import { GameStateFlag } from "../src/enums/flags/GameStateFlag";
+
 declare function Game(this: void): Game;
 
 declare interface Game {
