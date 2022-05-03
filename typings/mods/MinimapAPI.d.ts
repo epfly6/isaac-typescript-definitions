@@ -45,7 +45,7 @@ interface MinimapAPIInterface {
     variant: number,
     subtype: number,
     func: (pickup: EntityPickup) => boolean | undefined,
-    icongroup: string | number,
+    icongroup: string | number, // cspell:disable-line
     priority: number,
   ): MinimapAPIRoomDescriptor;
 
@@ -137,8 +137,8 @@ interface MinimapAPIInterface {
 
   AddRoomShape(
     id: number | string,
-    smallAnims: RoomAnimsTable,
-    largeAnims: RoomAnimsTable,
+    smallAnims: RoomAnimsTable, // cspell:disable-line
+    largeAnims: RoomAnimsTable, // cspell:disable-line
     gridPivot: Vector,
     gridSize: Vector,
     positions: Vector[],
@@ -160,7 +160,7 @@ interface MinimapAPIInterface {
 
   GetPositionRelativeToDoor(
     room: MinimapAPIRoomDescriptor,
-    doorslot: DoorSlot,
+    doorslot: DoorSlot, // cspell:disable-line
   ): Vector;
 
   GetRoom(position: Vector): MinimapAPIRoomDescriptor | undefined;
@@ -257,6 +257,7 @@ interface MinimapAPIIcon {
   sprite: Sprite;
 }
 
+// cspell:disable-next-line
 interface RoomAnimsTable {
   RoomCurrent: {
     anim: string;
@@ -264,6 +265,7 @@ interface RoomAnimsTable {
     sprite: Sprite;
   };
 
+  // cspell:disable-next-line
   RoomSemivisited: {
     anim: string;
     frame: number;

@@ -3,6 +3,7 @@
   "extends": "./tsconfig.json",
   "include": [
     // These must match the base the "include" setting in the base "tsconfig.json" file
+    "./src/**/*.ts",
     "./typings/**/*.ts",
 
     // These are ESLint-only inclusions

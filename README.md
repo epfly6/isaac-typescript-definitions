@@ -6,4 +6,4 @@ These are TypeScript definitions for [The Binding of Isaac: Repentance](https://
 
 [IsaacScript](https://isaacscript.github.io/) mods are automatically configured to use these definitions.
 
-<br />
+<br>

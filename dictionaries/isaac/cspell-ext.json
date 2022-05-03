@@ -1,0 +1,37 @@
+// cSpell Settings
+{
+    "id": "isaac",
+    "name": "isaac",
+    "description": "Words for The Binding of Isaac: Repentance",
+    "readonly": true,
+    // List of dictionary files to add to the global list of dictionaries
+    "dictionaryDefinitions": [
+        {
+            "name": "isaac",
+            "path": "./isaac.txt",
+            "description": "Words for The Binding of Isaac: Repentance"
+        }
+    ],
+    // Dictionaries to always be used.
+    // Generally left empty
+    "dictionaries": [],
+    // Language Rules to apply to matching files.
+    // Files are matched on `languageId` and `local`
+    "languageSettings": [
+        {
+            // VSCode languageId. i.e. typescript, java, go, cpp, javascript, markdown, latex
+            // * will match against any file type.
+            "languageId": "*",
+            // Language local. i.e. en-US, de-AT, or ru. * will match all locals.
+            // Multiple locals can be specified like: "en, en-US" to match both English and English US.
+            "locale": "*",
+            // By default the whole text of a file is included for spell checking
+            // Adding patterns to the "includeRegExpList" to only include matching patterns
+            "includeRegExpList": [],
+            // List of dictionaries to enable by name in `dictionaryDefinitions`
+            "dictionaries": ["isaac"],
+            // Dictionary definitions can also be supplied here. They are only used iff "languageId" and "locale" match.
+            "dictionaryDefinitions": []
+        }
+    ]
+}

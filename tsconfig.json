@@ -21,6 +21,7 @@
 
   // A list of the TypeScript files to compile
   "include": [
+    "./src/**/*.ts",
     "./typings/**/*.ts",
   ],
 }

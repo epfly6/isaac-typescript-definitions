@@ -52,7 +52,7 @@ module.exports = {
     // Defined at:
     // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/style.js
     // We keep the Airbnb specification but allow calling functions that overload Lua operators:
-    // https://moddingofisaac.com/docs/class_vector.html
+    // https://wofsauge.github.io/IsaacDocs/rep/Vector.html
     "no-underscore-dangle": [
       "error",
       {

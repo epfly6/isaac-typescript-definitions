@@ -27,11 +27,13 @@ npx eslint --max-warnings 0 typings
 
 # Step 3 - Spell check every file using cspell
 # We use no-progress and no-summary because we want to only output errors
-npx cspell --no-progress --no-summary "typings/**/*.ts"
-npx cspell --no-progress --no-summary "scripts/**/*.py"
+#npx cspell --no-progress --no-summary
 
 # Step 4 - Check for unused imports
 # The "--error" flag makes it return an error code of 1 if unused exports are found
 npx ts-prune --error
+
+# Step 5 - Check dictionaries
+"$DIR/dictionaries/check.sh"
 
 echo "Successfully linted in $SECONDS seconds."

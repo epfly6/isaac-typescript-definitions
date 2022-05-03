@@ -52,6 +52,8 @@ declare interface Level {
   /** Returns the current room's grid index. */
   GetCurrentRoomIndex(): int;
 
+  // cspell:words Maldición oscuridad
+
   /**
    * Returns the name of the current floor's curse, like "Curse of the Unknown!". If there are two
    * or more curses on the floor, this will only return the name of the curse with the lowest ID.

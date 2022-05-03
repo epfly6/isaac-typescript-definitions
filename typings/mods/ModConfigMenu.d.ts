@@ -140,6 +140,8 @@ declare interface ModConfigMenuInterface {
    */
   MenuData: LuaTable<int, MenuData>;
 
+  // cspell:words modconfig
+
   PopupGfx: {
     /* eslint-disable @typescript-eslint/member-ordering */
     THIN_SMALL: "gfx/ui/modconfig/popup_thin_small.png";

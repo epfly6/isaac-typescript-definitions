@@ -18,6 +18,8 @@ declare interface Seeds {
    */
   GetStartSeed(): Seed;
 
+  // cspell:words ABCD EFGH
+
   /**
    * The "start seed" is a number between 1 and (2^32 - 1) that is used to generate the random
    * elements for the current run. When converted to a string, it looks like "ABCD EFGH". (This is

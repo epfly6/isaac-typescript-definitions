@@ -5,6 +5,9 @@
  * For EntityType.ENTITY_PLAYER (1), PlayerVariant.PLAYER (0)
  *
  * This is the sub-type of a player.
+ *
+ * Conventionally, variables that have this type are represented as "character" instead of
+ * "playerType", since the former is more descriptive of what this value actually represents.
  */
 declare enum PlayerType {
   /** Used in the secret Possessor Mode added in Repentance. */
