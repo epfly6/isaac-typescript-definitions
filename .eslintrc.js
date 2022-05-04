@@ -6,8 +6,6 @@ module.exports = {
     // The linter base is the shared IsaacScript config
     // https://github.com/IsaacScript/eslint-config-isaacscript/blob/main/base.js
     "eslint-config-isaacscript/base",
-
-    "plugin:comment-length/recommended",
   ],
 
   parserOptions: {
@@ -44,17 +42,6 @@ module.exports = {
     // ark120202, the author of TypeScriptToLua, recommends using triple-slash
     // directives
     "@typescript-eslint/triple-slash-reference": "off",
-
-    // Documentation:
-    // https://github.com/lasselupe33/eslint-plugin-comment-length
-    // Defined at:
-    // https://github.com/lasselupe33/eslint-plugin-comment-length/blob/master/rules/src/index.ts
-    "comment-length/limit-multi-line-comments": [
-      "warn",
-      {
-        maxLength: 100,
-      },
-    ],
 
     // Documentation:
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-bitwise.md

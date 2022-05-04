@@ -9,6 +9,7 @@ despawn
 ECOLI
 Explosivo
 eyepatch
+fxlayers
 Giga
 Haemolacria
 KNOCKBACK

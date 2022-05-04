@@ -72,7 +72,7 @@ declare global {
      * @param source Default is undefined.
      * @param radiusMultiplier Default is 1.
      */
-    BombTearflagEffects(
+    BombTearflagEffects( // cspell:disable-line
       position: Vector,
       radius: float,
       tearFlags: int,
@@ -90,7 +90,11 @@ declare global {
 
     /**
      * This method is the same thing as the `Level.ChangeRoom()` method, but it will update the
-     * fxlayers properly.
+     * "fxlayers" of the room properly.
+     *
+     * ("fxlayers" stands for "effect layers". It refers to overlays, light effect from
+     * Basement/Cathedral, the Dogma static background, and so on. It is specified in the
+     * "fxlayers.xml" file.)
      *
      * @param roomGridIndex The room grid index of the destination room.
      * @param dimension Default is `Dimension.CURRENT`.

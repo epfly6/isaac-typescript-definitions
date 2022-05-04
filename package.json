@@ -28,9 +28,8 @@
     "lua-types": "^2.11.0"
   },
   "devDependencies": {
-    "eslint-plugin-comment-length": "file:../eslint-plugin-comment-length/rules",
-    "isaacscript-lint": "^1.0.100",
-    "isaacscript-tsconfig": "^1.1.9",
+    "isaacscript-lint": "^1.0.103",
+    "isaacscript-tsconfig": "^1.1.10",
     "ts-node": "^10.7.0",
     "typedoc": "^0.22.15",
     "typedoc-plugin-merge-modules": "^3.1.0",

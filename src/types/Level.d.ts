@@ -16,8 +16,12 @@ declare interface Level {
   CanStageHaveCurseOfLabyrinth(levelStage: LevelStage): boolean;
 
   /**
-   * This function is bugged and does not update the fxlayers properly. Use the `Game.ChangeRoom`
+   * This function is bugged and does not update the "fxlayers" properly. Use the `Game.ChangeRoom`
    * method instead.
+   *
+   * ("fxlayers" stands for "effect layers". It refers to overlays, light effect from
+   * Basement/Cathedral, the Dogma static background, and so on. It is specified in the
+   * "fxlayers.xml" file.)
    *
    * @param roomGridIndex The room grid index of the destination room.
    * @param dimension Default is `Dimension.CURRENT`.
