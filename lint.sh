@@ -18,12 +18,12 @@ SECONDS=0
 cd "$DIR"
 
 # Step 1 - Use Prettier to check formatting
-npx prettier --check "typings/**/*.ts"
+npx prettier --check "src/**/*.ts"
 
 # Step 2 - Use ESLint to lint the TypeScript
 # Since all ESLint errors are set to warnings,
 # we set max warnings to 0 so that warnings will fail in CI
-npx eslint --max-warnings 0 typings
+npx eslint --max-warnings 0 src
 
 # Step 3 - Spell check every file using cspell
 # We use no-progress and no-summary because we want to only output errors
@@ -31,7 +31,7 @@ npx eslint --max-warnings 0 typings
 
 # Step 4 - Check for unused imports
 # The "--error" flag makes it return an error code of 1 if unused exports are found
-npx ts-prune --error
+npx ts-prune --error --ignore 'index.ts'
 
 # Step 5 - Check dictionaries
 "$DIR/dictionaries/check.sh"

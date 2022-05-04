@@ -13,6 +13,6 @@ rm -rf "$DOCS_DIR"
 npx typedoc \
   --out "$DOCS_DIR" \
   --entryPointStrategy expand \
-  --entryPoints "$DIR/typings" \
+  --entryPoints "$DIR/src" \
 
 echo "Successfully created docs in $SECONDS seconds."

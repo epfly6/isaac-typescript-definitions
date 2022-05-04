@@ -1,3 +1,8 @@
+/**
+ * In any file where an enum import occurs, the "declare global" directive is used:
+ * https://stackoverflow.com/questions/39040108/import-class-in-definition-file-d-ts
+ */
+
 /** The Isaac definitions automatically bundle the definitions for Lua 5.3 as a convenience. */
 /// <reference types="lua-types/5.3" />
 
@@ -137,11 +142,11 @@
 
 /// <reference path="unofficial/AddCallbackParameters.d.ts" />
 /// <reference path="unofficial/APIVersion.d.ts" />
+/// <reference path="unofficial/BitFlag.d.ts" />
 /// <reference path="unofficial/EntitySubPlayer.d.ts" />
 /// <reference path="unofficial/PtrHash.d.ts" />
 /// <reference path="unofficial/ReadonlyRoomDescriptor.d.ts" />
 /// <reference path="unofficial/Seed.d.ts" />
-/// <reference path="unofficial/Userdata.d.ts" />
 
 /**
  * Unofficial Enums

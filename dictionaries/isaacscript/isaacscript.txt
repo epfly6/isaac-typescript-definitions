@@ -20,5 +20,6 @@ Nuxt
 parceljs
 pids
 reimplement
+tstl
 typedoc
 Zamiell

@@ -1,24 +1,28 @@
 // This is the configuration file for ESLint, the TypeScript linter
+
 // https://eslint.org/docs/user-guide/configuring
 module.exports = {
   extends: [
     // The linter base is the shared IsaacScript config
     // https://github.com/IsaacScript/eslint-config-isaacscript/blob/main/base.js
     "eslint-config-isaacscript/base",
+
+    "plugin:comment-length/recommended",
   ],
 
   parserOptions: {
-    // ESLint needs to know about the project's TypeScript settings in order for TypeScript-specific
-    // things to lint correctly
-    // We do not point this at "./tsconfig.json" because certain files (such at this file) should be
-    // linted but not included in the actual project output
+    // ESLint needs to know about the project's TypeScript settings in order for
+    // TypeScript-specific things to lint correctly
+    // We do not point this at "./tsconfig.json" because certain files (such at
+    // this file) should be linted but not included in the actual project output
     project: "./tsconfig.eslint.json",
   },
 
   rules: {
-    // Documentation: https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md
-    // We want class and interface definitions to be alphabetically ordered so that they match the
-    // Isaac documentation
+    // Documentation:
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md
+    // We want class and interface definitions to be alphabetically ordered so
+    // that they match the Isaac documentation
     "@typescript-eslint/member-ordering": [
       "warn",
       {
@@ -37,8 +41,20 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/triple-slash-reference.md
     // Defined at:
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
-    // ark120202, the author of TypeScriptToLua, recommends using triple-slash directives
+    // ark120202, the author of TypeScriptToLua, recommends using triple-slash
+    // directives
     "@typescript-eslint/triple-slash-reference": "off",
+
+    // Documentation:
+    // https://github.com/lasselupe33/eslint-plugin-comment-length
+    // Defined at:
+    // https://github.com/lasselupe33/eslint-plugin-comment-length/blob/master/rules/src/index.ts
+    "comment-length/limit-multi-line-comments": [
+      "warn",
+      {
+        maxLength: 100,
+      },
+    ],
 
     // Documentation:
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-bitwise.md
@@ -51,7 +67,8 @@ module.exports = {
     // https://eslint.org/docs/rules/no-underscore-dangle
     // Defined at:
     // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/style.js
-    // We keep the Airbnb specification but allow calling functions that overload Lua operators:
+    // We keep the Airbnb specification but allow calling functions that
+    // overload Lua operators:
     // https://wofsauge.github.io/IsaacDocs/rep/Vector.html
     "no-underscore-dangle": [
       "error",

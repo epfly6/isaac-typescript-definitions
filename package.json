@@ -18,7 +18,8 @@
   },
   "license": "GPL-3.0",
   "author": "Zamiell",
-  "types": "typings/index.d.ts",
+  "main": "dist/index",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/**/*.lua",
     "dist/**/*.d.ts"
@@ -27,8 +28,10 @@
     "lua-types": "^2.11.0"
   },
   "devDependencies": {
+    "eslint-plugin-comment-length": "file:../eslint-plugin-comment-length/rules",
     "isaacscript-lint": "^1.0.100",
     "isaacscript-tsconfig": "^1.1.9",
+    "ts-node": "^10.7.0",
     "typedoc": "^0.22.15",
     "typedoc-plugin-merge-modules": "^3.1.0",
     "typescript": "^4.6.4",
