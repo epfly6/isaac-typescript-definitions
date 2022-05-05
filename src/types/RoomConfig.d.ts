@@ -1,27 +1,25 @@
-// This is "RoomConfig::Room" in the docs
+// This is "RoomConfigRoom" in the docs:
+// https://wofsauge.github.io/IsaacDocs/rep/RoomConfig_Room.html
 
-declare interface RoomConfig {
-  /**
-   * This is not the same thing as the Difficulty enum. Each room has an arbitrarily set difficulty
-   * of 0, 1, 2, 5, or 10. The floor generation algorithm attempts to generates floors with a
-   * combined difficulty of a certain value. If the difficulty is 0, that means that the room will
-   * never be chosen and is effectively removed from the game.
-   */
-  Difficulty: int;
+import { RoomShape } from "../enums/RoomShape";
+import { DoorSlotFlag } from "../enums/unofficial/flags/DoorSlotFlag";
+import { RoomDifficulty } from "../enums/unofficial/RoomDifficulty";
 
-  /** A combination of `DoorSlotFlag`. */
-  Doors: int;
-
-  Height: int;
-  InitialWeight: float;
-  Name: string;
-  Shape: RoomShape;
-  SpawnCount: int;
-  Spawns: SpawnList;
-  StageID: StageID;
-  Subtype: int;
-  Type: RoomType;
-  Variant: int;
-  Weight: float;
-  Width: int;
+declare global {
+  interface RoomConfig {
+    Difficulty: RoomDifficulty;
+    Doors: BitFlags<DoorSlotFlag>;
+    Height: int;
+    InitialWeight: float;
+    Name: string;
+    Shape: RoomShape;
+    SpawnCount: int;
+    Spawns: SpawnList;
+    StageID: StageID;
+    Subtype: int;
+    Type: RoomType;
+    Variant: int;
+    Weight: float;
+    Width: int;
+  }
 }

@@ -1,4 +1,6 @@
+import { DamageFlag } from "../enums/flags/DamageFlag";
 import { TearFlag } from "../enums/flags/TearFlag";
+import { UseFlag } from "../enums/flags/UseFlag";
 
 declare global {
   interface EntityPlayer extends Entity {
@@ -135,7 +137,7 @@ declare global {
      * @param position
      * @param playAnim If false, skips the appear animation for the familiars.
      */
-    AddMinisaac(position: Vector, playAnim?: boolean): EntityFamiliar; // cspell:disable-line
+    AddMinisaac(position: Vector, playAnim?: boolean): EntityFamiliar;
 
     AddNullCostume(nullItemID: NullItemID | int): void;
     AddPill(pillColor: PillColor | int): void;
@@ -528,15 +530,10 @@ declare global {
     GetBodyColor(): SkinColor;
 
     /** There is no separate `BombFlag` enum, so bombs use `TearFlag`. */
-    GetBombFlags(): BitFlag<TearFlag>;
+    GetBombFlags(): BitFlags<TearFlag>;
 
-    /**
-     * There is no separate BombFlags enum, so bombs use tear flags.
-     * Be aware that this really takes a BitSet128 instead of an integer.
-     * However, all of the TearFlags enums values use BitSet128 constructors.
-     */
     GetBombVariant(
-      tearFlags: TearFlag | BitFlag<TearFlag>,
+      tearFlags: TearFlag | BitFlags<TearFlag>,
       forceSmallBomb: boolean,
     ): BombVariant | int;
 
@@ -622,7 +619,7 @@ declare global {
     GetJarHearts(): int;
     GetLaserOffset(laserOffset: LaserOffset, direction: Vector): Vector;
     GetLastActionTriggers(): int;
-    GetLastDamageFlags(): DamageFlag;
+    GetLastDamageFlags(): BitFlags<DamageFlag>;
     GetLastDamageSource(): Readonly<EntityRef>;
     GetLastDirection(): Readonly<Vector>;
 
@@ -826,7 +823,7 @@ declare global {
     /**
      * @param damageFlag Default is 0.
      */
-    HasInvincibility(damageFlag?: DamageFlag): boolean;
+    HasInvincibility(damageFlag?: DamageFlag | BitFlags<DamageFlag>): boolean;
 
     HasPlayerForm(playerForm: PlayerForm): boolean;
     HasTimedItem(): boolean;
@@ -1081,7 +1078,7 @@ declare global {
      */
     UseActiveItem(
       collectibleType: CollectibleType | int,
-      useFlag?: UseFlag,
+      useFlag?: UseFlag | BitFlags<UseFlag>,
       activeSlot?: ActiveSlot,
     ): void;
 
@@ -1108,7 +1105,7 @@ declare global {
      * @param card
      * @param useFlag Default is 0.
      */
-    UseCard(card: Card | int, useFlag?: UseFlag): void;
+    UseCard(card: Card | int, useFlag?: UseFlag | BitFlags<UseFlag>): void;
 
     /**
      * @param pillEffect
@@ -1118,7 +1115,7 @@ declare global {
     UsePill(
       pillEffect: PillEffect | int,
       pillColor: PillColor | int,
-      useFlag?: UseFlag,
+      useFlag?: UseFlag | BitFlags<UseFlag>,
     ): void;
 
     /** Triggers one of Tainted Blue Baby's poop spells. */
@@ -1174,13 +1171,8 @@ declare global {
     /** Only change this in the EvaluateCache callback. */
     TearFallingSpeed: float;
 
-    /**
-     * Only change this in the EvaluateCache callback.
-     *
-     * Be aware that this is really a BitSet128 instead of an integer. However, all of the
-     * TearFlags enums values use BitSet128 constructors.
-     */
-    TearFlags: int;
+    /** Only change this in the EvaluateCache callback. */
+    TearFlags: BitFlags<TearFlag>;
 
     /**
      * This is equal to the range stat multiplied by -1.

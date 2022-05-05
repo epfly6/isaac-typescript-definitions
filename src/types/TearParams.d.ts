@@ -1,15 +1,13 @@
-declare interface TearParams {
-  BombVariant: int;
-  TearColor: Color;
-  TearDamage: float;
+import { TearFlag } from "../enums/flags/TearFlag";
 
-  /**
-   * Be aware that this is really a BitSet128 instead of an integer.
-   * However, all of the TearFlags enums values use BitSet128 constructors.
-   */
-  TearFlags: int;
-
-  TearHeight: float;
-  TearScale: float;
-  TearVariant: TearVariant | int;
+declare global {
+  interface TearParams {
+    BombVariant: int;
+    TearColor: Color;
+    TearDamage: float;
+    TearFlags: BitFlags<TearFlag>;
+    TearHeight: float;
+    TearScale: float;
+    TearVariant: TearVariant | int;
+  }
 }

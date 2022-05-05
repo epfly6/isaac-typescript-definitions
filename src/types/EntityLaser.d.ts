@@ -2,13 +2,13 @@ import { TearFlag } from "../enums/flags/TearFlag";
 
 declare global {
   interface EntityLaser extends Entity {
-    AddTearFlags(flags: TearFlag | BitFlag<TearFlag>): void;
-    ClearTearFlags(flags: TearFlag | BitFlag<TearFlag>): void;
+    AddTearFlags(flags: TearFlag | BitFlags<TearFlag>): void;
+    ClearTearFlags(flags: TearFlag | BitFlags<TearFlag>): void;
     GetEndPoint(): Readonly<Vector>;
     // GetNonOptimizedSamples(): Readonly<HomingLaserSampleList>; // HomingLaser is not implemented
     GetRenderZ(): int;
     // GetSamples(): Readonly<HomingLaserSampleList>; // HomingLaser is not implemented
-    HasTearFlags(flags: TearFlag | BitFlag<TearFlag>): boolean;
+    HasTearFlags(flags: TearFlag | BitFlags<TearFlag>): boolean;
     IsCircleLaser(): boolean;
     IsSampleLaser(): boolean;
 
@@ -50,7 +50,7 @@ declare global {
     // SampleLaser: boolean; // Should use IsSampleLaser() instead
     Shrink: boolean;
     StartAngleDegrees: float;
-    TearFlags: BitFlag<TearFlag>;
+    TearFlags: BitFlags<TearFlag>;
     Timeout: int;
   }
 

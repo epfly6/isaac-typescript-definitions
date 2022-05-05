@@ -17,6 +17,14 @@ module.exports = {
   },
 
   rules: {
+    // ASDF
+    "@typescript-eslint/no-redeclare": [
+      "warn",
+      {
+        ignoreDeclarationMerge: true,
+      },
+    ],
+
     // Documentation:
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md
     // We want class and interface definitions to be alphabetically ordered so

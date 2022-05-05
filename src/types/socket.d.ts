@@ -1,11 +1,19 @@
-// The "socket.lua" module exists at:
-// C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac Rebirth\resources\scripts\socket.lua
-// It is intended to be consumed by mods via:
-// local socket = require("socket")
-// (but it requires that the "--luadebug" flag is enabled)
-// The documentation is located at:
-// https://web.tecgraf.puc-rio.br/luasocket/old/luasocket-2.0-beta/tcp.html
-
+/**
+ * The "socket.lua" module exists at:
+ *
+ * `C:\Program Files (x86)\Steam\steamapps\common\The Binding of Isaac
+ * Rebirth\resources\scripts\socket.lua`
+ *
+ * It is intended to be consumed by mods via:
+ *
+ * ```lua
+ * local socket = require("socket")
+ * ```
+ * (but it requires that the "--luadebug" flag is enabled)
+ *
+ * The documentation is located at:
+ * https://web.tecgraf.puc-rio.br/luasocket/old/luasocket-2.0-beta/tcp.html
+ */
 declare interface Socket {
   /**
    * Returns the epoch timestamp in seconds, with four decimal places of precision (e.g.

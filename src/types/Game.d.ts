@@ -1,4 +1,6 @@
+import { DamageFlag } from "../enums/flags/DamageFlag";
 import { GameStateFlag } from "../enums/flags/GameStateFlag";
+import { TearFlag } from "../enums/flags/TearFlag";
 
 declare global {
   function Game(this: void): Game;
@@ -12,16 +14,14 @@ declare global {
     AddTreasureRoomsVisited(): void;
 
     /**
-     * There is no separate BombFlags enum, so bombs use tear flags.
-     * Be aware that this really takes a BitSet128 instead of an integer.
-     * However, all of the TearFlags enums values use BitSet128 constructors.
+     * There is no separate `BombFlag` enum, so bombs use `TearFlag`.
      *
      * @param position
      * @param damage
      * @param radius
      * @param lineCheck Default is true.
      * @param source Default is undefined.
-     * @param tearFlags Default is `TearFlags.TEAR_NORMAL`.
+     * @param tearFlags Default is `TearFlag.TEAR_NORMAL`.
      * @param damageFlags Default is `DamageFlag.DAMAGE_EXPLOSION`.
      * @param damageSource Default is false.
      */
@@ -31,15 +31,13 @@ declare global {
       radius: float,
       lineCheck?: boolean,
       source?: Entity,
-      tearFlags?: int,
-      damageFlags?: DamageFlag,
+      tearFlags?: BitFlags<TearFlag>,
+      damageFlags?: DamageFlag | BitFlags<DamageFlag>,
       damageSource?: boolean,
     ): void;
 
     /**
-     * There is no separate BombFlags enum, so bombs use tear flags.
-     * Be aware that this really takes a BitSet128 instead of an integer.
-     * However, all of the TearFlags enums values use BitSet128 constructors.
+     * There is no separate `BombFlag` enum, so bombs use `TearFlag`.
      *
      * @param position
      * @param damage
@@ -54,13 +52,13 @@ declare global {
     BombExplosionEffects(
       position: Vector,
       damage: float,
-      tearFlags?: int,
+      tearFlags?: BitFlags<TearFlag>,
       color?: Color,
       source?: Entity,
       radiusMultiplier?: float,
       lineCheck?: boolean,
       damageSource?: boolean,
-      damageFlags?: DamageFlag,
+      damageFlags?: DamageFlag | BitFlags<DamageFlag>,
     ): void;
 
     /**
@@ -72,10 +70,10 @@ declare global {
      * @param source Default is undefined.
      * @param radiusMultiplier Default is 1.
      */
-    BombTearflagEffects( // cspell:disable-line
+    BombTearflagEffects(
       position: Vector,
       radius: float,
-      tearFlags: int,
+      tearFlags: TearFlag | BitFlags<TearFlag>,
       source?: Entity,
       radiusMultiplier?: float,
     ): void;
@@ -236,8 +234,8 @@ declare global {
     ): void;
 
     /**
-     * You have to set Level.LeaveDoor to an appropriate value before using this function. Otherwise,
-     * you will be sent to the wrong room. (For teleports, set it to -1.)
+     * You have to set Level.LeaveDoor to an appropriate value before using this function.
+     * Otherwise, you will be sent to the wrong room. (For teleports, set it to -1.)
      *
      * @param roomGridIndex The room grid index of the destination room.
      * @param direction

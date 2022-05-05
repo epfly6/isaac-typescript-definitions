@@ -1,3 +1,4 @@
+/** Used with the `Game.GetStateFlag` and `Game.SetStateFlag` methods. */
 export enum GameStateFlag {
   FAMINE_SPAWNED = 0,
   PESTILENCE_SPAWNED = 1,

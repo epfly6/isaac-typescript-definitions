@@ -6,9 +6,9 @@ declare function BitSet128(this: void, l: int, h: int): BitSet128;
  */
 declare interface BitSet128 {
   // These are used to transpile:
-  // tearFlags.bor(TearFlags.TEAR_SPECTRAL)
+  // tearFlags.bor(TearFlag.TEAR_SPECTRAL)
   // to:
-  // tearFlags | TearFlags.TEAR_SPECTRAL
+  // tearFlags | TearFlag.TEAR_SPECTRAL
   // https://typescripttolua.github.io/docs/advanced/language-extensions/#operator-map-types
   band: LuaBitwiseAndMethod<BitSet128, BitSet128>;
   bnot: LuaBitwiseNotMethod<BitSet128>;

@@ -2,26 +2,10 @@ import { TearFlag } from "../enums/flags/TearFlag";
 
 declare global {
   interface EntityTear extends Entity {
-    /**
-     * Be aware that this really takes a BitSet128 instead of an integer.
-     * However, all of the TearFlags enums values use BitSet128 constructors.
-     */
-    AddTearFlags(flags: TearFlag | BitFlag<TearFlag>): void;
-
+    AddTearFlags(flags: TearFlag | BitFlags<TearFlag>): void;
     ChangeVariant(tearVariant: TearVariant | int): void;
-
-    /**
-     * Be aware that this really takes a BitSet128 instead of an integer.
-     * However, all of the TearFlags enums values use BitSet128 constructors.
-     */
-    ClearTearFlags(flags: TearFlag | BitFlag<TearFlag>): void;
-
-    /**
-     * Be aware that this really takes a BitSet128 instead of an integer.
-     * However, all of the TearFlags enums values use BitSet128 constructors.
-     */
-    HasTearFlags(flags: TearFlag | BitFlag<TearFlag>): boolean;
-
+    ClearTearFlags(flags: TearFlag | BitFlags<TearFlag>): void;
+    HasTearFlags(flags: TearFlag | BitFlags<TearFlag>): boolean;
     ResetSpriteScale(): void;
     SetDeadEyeIntensity(intensity: float): void;
     SetKnockbackMultiplier(multiplier: float): void;
@@ -51,20 +35,14 @@ declare global {
     StickDiff: Vector;
     StickTarget: Entity;
     StickTimer: int;
-
-    /**
-     * Be aware that this is really a BitSet128 instead of an integer.
-     * However, all of the TearFlags enums values use BitSet128 constructors.
-     */
-    TearFlags: int;
+    TearFlags: BitFlags<TearFlag>;
 
     /**
      * - In each run, the game keeps track of how many tears have been fired by the player in total.
-     * This is used for items such as Lead Pencil.
      * - TearIndex represents this tear counter.
      * - It is 0-indexed, meaning that the first tear fired by the player on a run will have a
-     * TearIndex of 0, the second tear fired by the player on a run will have a TearIndex of 1,and so
-     * on.
+     * TearIndex of 0, the second tear fired by the player on a run will have a TearIndex of 1, and
+     * so on.
      */
     readonly TearIndex: int;
 

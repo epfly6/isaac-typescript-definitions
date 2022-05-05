@@ -2,12 +2,12 @@ import { TearFlag } from "../enums/flags/TearFlag";
 
 declare global {
   interface EntityKnife extends Entity {
-    AddTearFlags(flags: TearFlag | BitFlag<TearFlag>): void;
-    ClearTearFlags(flags: TearFlag | BitFlag<TearFlag>): void;
+    AddTearFlags(flags: TearFlag | BitFlags<TearFlag>): void;
+    ClearTearFlags(flags: TearFlag | BitFlags<TearFlag>): void;
     GetKnifeDistance(): float;
     GetKnifeVelocity(): float;
     GetRenderZ(): int;
-    HasTearFlags(flags: TearFlag | BitFlag<TearFlag>): boolean;
+    HasTearFlags(flags: TearFlag | BitFlags<TearFlag>): boolean;
     IsFlying(): boolean;
     Reset(): void;
     SetPathFollowSpeed(speed: float): void;
@@ -20,6 +20,6 @@ declare global {
     Rotation: float;
     RotationOffset: float;
     Scale: float;
-    TearFlags: BitFlag<TearFlag>;
+    TearFlags: BitFlags<TearFlag>;
   }
 }

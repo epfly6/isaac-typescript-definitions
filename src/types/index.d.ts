@@ -126,7 +126,6 @@
 /// <reference path="enums/PlayerSpriteLayer.d.ts" />
 /// <reference path="enums/PoopSpellType.d.ts" />
 /// <reference path="enums/RenderMode.d.ts" />
-/// <reference path="enums/RoomShape.d.ts" />
 /// <reference path="enums/RoomTransitionAnim.d.ts" />
 /// <reference path="enums/RoomType.d.ts" />
 /// <reference path="enums/SeedEffect.d.ts" />
@@ -138,11 +137,14 @@
 
 /** Unofficial Classes and Types */
 
+/// <reference path="unofficial/enumHelpers.d.ts" />
 /// <reference path="unofficial/primitives.d.ts" />
 
 /// <reference path="unofficial/AddCallbackParameters.d.ts" />
 /// <reference path="unofficial/APIVersion.d.ts" />
 /// <reference path="unofficial/BitFlag.d.ts" />
+/// <reference path="unofficial/BitFlag128.d.ts" />
+/// <reference path="unofficial/BitFlags.d.ts" />
 /// <reference path="unofficial/EntitySubPlayer.d.ts" />
 /// <reference path="unofficial/PtrHash.d.ts" />
 /// <reference path="unofficial/ReadonlyRoomDescriptor.d.ts" />
@@ -173,8 +175,6 @@
 /// <reference path="unofficial/enums/Controller.d.ts" />
 /// <reference path="unofficial/enums/ControllerIndex.d.ts" />
 /// <reference path="unofficial/enums/Dimension.d.ts" />
-/// <reference path="unofficial/enums/DisplayFlag.d.ts" />
-/// <reference path="unofficial/enums/DoorSlotFlag.d.ts" />
 /// <reference path="unofficial/enums/Ending.d.ts" />
 /// <reference path="unofficial/enums/FadeoutTarget.d.ts" />
 /// <reference path="unofficial/enums/GridEntityXMLType.d.ts" />
@@ -187,7 +187,6 @@
 /// <reference path="unofficial/enums/PocketItemSlot.d.ts" />
 /// <reference path="unofficial/enums/ProjectilesMode.d.ts" />
 /// <reference path="unofficial/enums/RoomDescriptorDisplayType.d.ts" />
-/// <reference path="unofficial/enums/RoomDescriptorFlag.d.ts" />
 /// <reference path="unofficial/enums/StageID.d.ts" />
 /// <reference path="unofficial/enums/StageTransition.d.ts" />
 /// <reference path="unofficial/enums/TrinketSlot.d.ts" />
