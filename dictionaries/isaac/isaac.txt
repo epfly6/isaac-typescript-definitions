@@ -11,8 +11,8 @@ cutscene
 datagrams
 despawn
 ECOLI
-Explossion
 Explosivo
+Explossion
 eyepatch
 Fadein
 fxlayers

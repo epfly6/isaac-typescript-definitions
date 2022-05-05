@@ -34,6 +34,6 @@ npx eslint --max-warnings 0 src
 npx ts-prune --error --ignore 'index.ts'
 
 # Step 5 - Check dictionaries
-bash "$DIR/dictionaries/check.sh"
+bash "$DIR/dictionaries/check_dictionaries.sh"
 
 echo "Successfully linted in $SECONDS seconds."
