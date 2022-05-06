@@ -1,6 +1,8 @@
 /**
- * In any file where an enum import occurs, the "declare global" directive is used:
+ * In a file where any import occurs, the "declare global" directive must be used:
  * https://stackoverflow.com/questions/39040108/import-class-in-definition-file-d-ts
+ *
+ * In a file without imports, "declare global" cannot be used.
  */
 
 /** The Isaac definitions automatically bundle the definitions for Lua 5.3 as a convenience. */
@@ -86,7 +88,6 @@
 
 /** Vanilla Enums */
 
-/// <reference path="enums/flags.d.ts" />
 /// <reference path="enums/gridEntityState.d.ts" />
 /// <reference path="enums/gridEntityVariants.d.ts" />
 /// <reference path="enums/subTypes.d.ts" />

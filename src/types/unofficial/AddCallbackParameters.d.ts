@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/member-ordering */
 
+import { CacheFlag } from "../../enums/flags/CacheFlag";
 import { DamageFlag } from "../../enums/flags/DamageFlag";
 import { UseFlag } from "../../enums/flags/UseFlag";
 

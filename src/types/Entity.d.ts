@@ -36,7 +36,7 @@ declare global {
     GetColor(): Readonly<Color>;
     GetData(): Record<string, unknown>;
     GetDropRNG(): RNG;
-    GetEntityFlags(): BitFlags<EntityFlag>;
+    GetEntityFlags(): EntityFlag | BitFlags<EntityFlag>;
     GetLastChild(): Entity;
     GetLastParent(): Entity;
     GetSprite(): Sprite;

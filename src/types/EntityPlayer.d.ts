@@ -1,3 +1,4 @@
+import { CacheFlag } from "../enums/flags/CacheFlag";
 import { DamageFlag } from "../enums/flags/DamageFlag";
 import { TearFlag } from "../enums/flags/TearFlag";
 import { UseFlag } from "../enums/flags/UseFlag";
@@ -37,7 +38,7 @@ declare global {
      * Used to specify the kinds of stats that should be evaluated the next time `EvaluateCache()`
      * is run.
      */
-    AddCacheFlags(cacheFlags: CacheFlag): void;
+    AddCacheFlags(cacheFlags: CacheFlag | BitFlags<CacheFlag>): void;
 
     AddCard(card: Card | int): void;
 

@@ -14,7 +14,9 @@ declare global {
 
     AddScale(value: float): void;
 
-    ClearProjectileFlags(flags: BitFlags<ProjectileFlag>): void;
+    ClearProjectileFlags(
+      flags: ProjectileFlag | BitFlags<ProjectileFlag>,
+    ): void;
 
     HasProjectileFlags(flags: ProjectileFlag | BitFlags<ProjectileFlag>): void;
 

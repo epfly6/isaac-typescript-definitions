@@ -32,16 +32,23 @@ declare interface ItemConfig {
 
   GetTrinkets(): Readonly<ItemConfigList>;
 
-  // In the "enums.lua" file, the ItemConfig class is extended with many members:
-  // - ItemConfig.CHARGE_*
-  // - ItemConfig.TAG_*
-  // - ItemConfig.CARDTYPE_*
-  // In IsaacScript, these are instead implemented as enums, since it is cleaner
-  // See ItemConfigChargeType, ItemConfigTag, and ItemConfigCardType respectively
+  /**
+   * In the "enums.lua" file, the ItemConfig class is extended with many members:
+   *
+   * - ItemConfig.CHARGE_*
+   * - ItemConfig.TAG_*
+   * - ItemConfig.CARDTYPE_*
+   *
+   * In IsaacScript, these are instead implemented as enums, since it is cleaner. See
+   * `ItemConfigChargeType`, `ItemConfigTag`, and `ItemConfigCardType` respectively.
+   */
 }
 
-// The static methods in this class can only be called by a global variable
-// e.g. ItemConfig.Config.IsValidCollectible(1)
+/**
+ * The static methods in this class can only be called by a global variable.
+ *
+ * e.g. `ItemConfig.Config.IsValidCollectible(1)`
+ */
 declare namespace ItemConfig {
   /**
    * This method does not work properly for modded items, so it should never be used.

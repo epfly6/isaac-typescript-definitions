@@ -31,7 +31,7 @@ declare global {
       radius: float,
       lineCheck?: boolean,
       source?: Entity,
-      tearFlags?: BitFlags<TearFlag>,
+      tearFlags?: TearFlag | BitFlags<TearFlag>,
       damageFlags?: DamageFlag | BitFlags<DamageFlag>,
       damageSource?: boolean,
     ): void;
@@ -52,7 +52,7 @@ declare global {
     BombExplosionEffects(
       position: Vector,
       damage: float,
-      tearFlags?: BitFlags<TearFlag>,
+      tearFlags?: TearFlag | BitFlags<TearFlag>,
       color?: Color,
       source?: Entity,
       radiusMultiplier?: float,
@@ -181,7 +181,7 @@ declare global {
     SetLastDevilRoomStage(levelStage: LevelStage): void;
     SetLastLevelWithDamage(levelStage: LevelStage): void;
     SetLastLevelWithoutHalfHp(levelStage: LevelStage): void;
-    SetStateFlag(gameStateFlag: GameStateFlag, val: boolean): void;
+    SetStateFlag(gameStateFlag: GameStateFlag, value: boolean): void;
     ShakeScreen(timeout: int): void;
     ShowFortune(): void;
 

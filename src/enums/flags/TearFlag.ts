@@ -6,7 +6,7 @@
  *
  * This enum was renamed from "TearFlags" to be consistent with the other flag enums.
  */
-export const TearFlagInternal = {
+const TearFlagInternal = {
   /** Default tear (no special effects). */
   NORMAL: BitSet128(0, 0),
 

@@ -66,35 +66,35 @@ declare global {
        * The display flags that this room will take on if seen from an adjacent room. This is
        * usually 0 for secret rooms, 3 for locked rooms and 5 for all others.
        */
-      AdjacentDisplayFlags: BitFlags<DisplayFlag> | undefined;
+      AdjacentDisplayFlags?: DisplayFlag | BitFlags<DisplayFlag>;
 
       /**
        * Optional. The API will automatically remove a room if you add this in the same position,
        * setting this to true will disable this functionality.
        */
-      AllowRoomOverlap: boolean | undefined;
+      AllowRoomOverlap?: boolean;
 
       /** The clear boolean for the room. */
-      Clear: boolean | undefined;
+      Clear?: boolean;
 
       /** A Color object that is applied when this room is rendered on the map. */
-      Color: Color | undefined;
+      Color?: Color;
 
       /**
        * A RoomDescriptor object if you are attaching a vanilla room to this table. Setting this
        * will cause this room's display flags and clear boolean to be taken from this
        * RoomDescriptor.
        */
-      Descriptor: RoomDescriptor | undefined;
+      Descriptor?: RoomDescriptor;
 
       /** The display flags for the room. Matches the format of `RoomDescriptor.DisplayFlags`. */
-      DisplayFlags: BitFlags<DisplayFlag> | undefined;
+      DisplayFlags?: DisplayFlag | BitFlags<DisplayFlag>;
 
       /**
        * This room is secret. It will not be revealed by the compass or the treasure map, and it
        * WILL be revealed by the blue map.
        */
-      Hidden: boolean | undefined;
+      Hidden?: boolean;
 
       /** Any value. This is used to identify your room later. */
       ID: number | string;
@@ -103,20 +103,20 @@ declare global {
        * A list of icon IDs that display on the map (e.g. keys and hearts). This will be overridden
        * once the player enters this room.
        */
-      ItemIcons: number[] | undefined;
+      ItemIcons?: number[];
 
       /**
        * A list of strings like above, but this is only shown when the player does not know the
        * room's type. (e.g. locked shop, dice room)
        */
-      LockedIcons: string[] | undefined;
+      LockedIcons?: string[];
 
       /**
        * A boolean. If true, then this room's minimap appearance will never be changed by the API
        * itself, meaning its display flags, clear status, visited status and pickup icons will have
        * to be updated externally.
        */
-      NoUpdate: boolean | undefined;
+      NoUpdate?: boolean;
 
       /** A vector representing the position of the room on the minimap. */
       Position: Vector;
@@ -131,13 +131,13 @@ declare global {
        * A RoomType enum value. Optional, but recommended if you want the room to work as expected
        * with minimap revealing items.
        */
-      Type: RoomType | undefined;
+      Type?: RoomType;
 
       /**
        * Whether the room has been visited or not. This will be set to true as soon as the player's
        * map position is in line with this room.
        */
-      Visited: boolean | undefined;
+      Visited?: boolean;
     }): MinimapAPIRoomDescriptor;
 
     AddRoomShape(
