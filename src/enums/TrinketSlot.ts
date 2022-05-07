@@ -1,4 +1,4 @@
-export const enum TrinketSlot {
+export enum TrinketSlot {
   /** The bottom-right trinket. */
   SLOT_1 = 0,
 

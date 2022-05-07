@@ -1,4 +1,4 @@
-export const enum Dimension {
+export enum Dimension {
   CURRENT = -1,
   MAIN = 0,
 

@@ -38,7 +38,7 @@
     "noHeader": true,
     "luaPlugins": [
       // A plugin to make enums safe from global variables
-      // { "name": "./plugins/noExtendedEnums.ts" },
+      { "name": "./plugins/noExtendedEnums.ts" },
     ],
   },
 }

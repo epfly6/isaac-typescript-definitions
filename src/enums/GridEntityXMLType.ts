@@ -3,7 +3,7 @@
  * This is converted by the game to the GridEntityType enum.
  * The `gridspawn` console command accepts GridEntityXMLType instead of GridEntityType.
  */
-export const enum GridEntityXMLType {
+export enum GridEntityXMLType {
   ROCK = 1000,
   ROCK_BOMB = 1001,
 

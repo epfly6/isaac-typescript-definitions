@@ -276,13 +276,7 @@ export enum BombVariant {
   ROCKET_GIGA = 20,
 }
 
-/**
- * For EntityType.PICKUP (5)
- *
- * The `PickupVariant.PICKUP_BROKEN_SHOVEL` value is missing from the vanilla enum, so this enum is
- * temporarily marked as being a const enum. When it is added to the vanilla game, this will go back
- * to being a normal enum.
- */
+/** For EntityType.PICKUP (5) */
 export enum PickupVariant {
   NULL = 0,
   HEART = 10,
