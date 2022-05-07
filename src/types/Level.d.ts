@@ -1,4 +1,5 @@
 import { LevelStateFlag } from "../enums/flags/LevelStateFlag";
+import { RoomType } from "../enums/RoomType";
 
 declare global {
   interface Level {
@@ -196,10 +197,10 @@ declare global {
      */
     UpdateVisibility(): void;
 
-    /** The position that the player will return to if they exit a crawlspace. */
+    /** The position that the player will return to if they exit a crawl space. */
     DungeonReturnPosition: Vector;
 
-    /** The grid index that the player will return to if they exit a crawlspace. */
+    /** The grid index that the player will return to if they exit a crawl space. */
     DungeonReturnRoomIndex: int;
 
     /** The `DoorSlot` that the player entered the room at. */

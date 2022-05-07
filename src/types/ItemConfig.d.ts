@@ -1,3 +1,6 @@
+import { NullItemID } from "../enums/NullItemID";
+import { PillEffect } from "../enums/PillEffect";
+
 declare interface ItemConfig {
   /** Returns undefined if the card was not found. */
   GetCard(card: Card | int): Readonly<ItemConfigCard> | undefined;

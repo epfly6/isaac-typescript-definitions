@@ -1,3 +1,20 @@
+import { Challenge } from "../enums/Challenge";
+import { EntityType } from "../enums/EntityType";
+import { LevelCurse } from "../enums/flags/LevelCurse";
+import { GridEntityType } from "../enums/GridEntityType";
+import { ModCallback } from "../enums/ModCallback";
+import { Music } from "../enums/Music";
+import { PillEffect } from "../enums/PillEffect";
+import { SoundEffect } from "../enums/SoundEffect";
+import {
+  Card,
+  CollectibleType,
+  PillColor,
+  TrinketType,
+} from "./enums/subTypes";
+import { PlayerVariant } from "./enums/variants";
+import { ItemConfig } from "./ItemConfig";
+
 /** @noSelf */
 declare namespace Isaac {
   /**
@@ -17,7 +34,7 @@ declare namespace Isaac {
    */
   function AddCallback(
     mod: Mod,
-    callbackID: ModCallbacks,
+    modCallback: ModCallback,
     callbackFn: () => void,
     entityID?: int,
   ): void;
@@ -34,7 +51,7 @@ declare namespace Isaac {
 
   /**
    * @param spawner
-   * @param entityType Default is `EntityType.ENTITY_NULL`.
+   * @param entityType Default is `EntityType.NULL`.
    * @param variant Specifying -1 will return all variants. Default is -1.
    * @param subType Specifying -1 will return all subtypes. Default is -1.
    */
@@ -213,8 +230,8 @@ declare namespace Isaac {
    * passed. (Frames are not a very good indicator of how much time has passed, because the game
    * locks up to load new data on every level transition and room transition.)
    *
-   * For example, you could use this to implement an on-screen speedrunning timer based on
-   * real-time, or to benchmark the performance impact of one function over another.
+   * For example, you could use this to implement an on-screen timer based on real-time, or to
+   * benchmark the performance impact of one function over another.
    */
   function GetTime(): int;
 
@@ -266,7 +283,7 @@ declare namespace Isaac {
 
   function RemoveCallback(
     mod: Mod,
-    callbackID: ModCallbacks,
+    modCallback: ModCallback,
     callbackFn: () => void,
   ): void;
 

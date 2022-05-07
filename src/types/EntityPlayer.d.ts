@@ -1,7 +1,31 @@
+import { ActiveSlot } from "../enums/ActiveSlot";
+import { CollectibleAnimation } from "../enums/CollectibleAnimation";
+import { ControllerIndex } from "../enums/ControllerIndex";
+import { Direction } from "../enums/Direction";
 import { CacheFlag } from "../enums/flags/CacheFlag";
 import { DamageFlag } from "../enums/flags/DamageFlag";
 import { TearFlag } from "../enums/flags/TearFlag";
 import { UseFlag } from "../enums/flags/UseFlag";
+import { LaserOffset } from "../enums/LaserOffset";
+import { NullItemID } from "../enums/NullItemID";
+import { PillEffect } from "../enums/PillEffect";
+import { PlayerForm } from "../enums/PlayerForm";
+import { PlayerItemAnimation } from "../enums/PlayerItemAnimation";
+import { PocketItemSlot } from "../enums/PocketItemSlot";
+import { PoopSpellType } from "../enums/PoopSpellType";
+import { SkinColor } from "../enums/SkinColor";
+import { TrinketSlot } from "../enums/TrinketSlot";
+import { WeaponType } from "../enums/WeaponType";
+import {
+  BabySubType,
+  Card,
+  CollectibleType,
+  DipFamiliarSubType,
+  PillColor,
+  PlayerType,
+  TrinketType,
+} from "./enums/subTypes";
+import { BombVariant, FamiliarVariant } from "./enums/variants";
 
 declare global {
   interface EntityPlayer extends Entity {
@@ -283,7 +307,7 @@ declare global {
     AreOpposingShootDirectionsPressed(): boolean;
 
     /**
-     * @param collectibleType Default is `CollectibleType.COLLECTIBLE_NULL`.
+     * @param collectibleType Default is `CollectibleType.NULL`.
      */
     CanAddCollectible(collectibleType?: CollectibleType): boolean;
 
@@ -660,8 +684,8 @@ declare global {
     GetMaxTrinkets(): int;
 
     /**
-     * Returns the current passive item mimicked by Modeling Clay
-     * (or COLLECTIBLE_NULL if no effect is being mimicked).
+     * Returns the current passive item mimicked by Modeling Clay or CollectibleType.NULL if no
+     * effect is being mimicked.
      */
     GetModelingClayEffect(): CollectibleType;
 
@@ -1023,7 +1047,7 @@ declare global {
     /**
      * Triggers the extra effect granted by Book of Virtues for the given active item.
      *
-     * @param collectibleType Default is `CollectibleType.COLLECTIBLE_NULL`.
+     * @param collectibleType Default is `CollectibleType.NULL`.
      * @param charge Default is 0.
      */
     TriggerBookOfVirtues(collectibleType?: CollectibleType, charge?: int): void;

@@ -86,62 +86,11 @@
 /// <reference path="Vector.d.ts" />
 /// <reference path="VectorList.d.ts" />
 
-/** Vanilla Enums */
-
-/// <reference path="enums/gridEntityState.d.ts" />
-/// <reference path="enums/gridEntityVariants.d.ts" />
-/// <reference path="enums/subTypes.d.ts" />
-/// <reference path="enums/variants.d.ts" />
-
-/// <reference path="enums/ActionTriggers.d.ts" />
-/// <reference path="enums/ActiveSlot.d.ts" />
-/// <reference path="enums/BackdropType.d.ts" />
-/// <reference path="enums/ButtonAction.d.ts" />
-/// <reference path="enums/Challenge.d.ts" />
-/// <reference path="enums/ChampionColor.d.ts" />
-/// <reference path="enums/Difficulty.d.ts" />
-/// <reference path="enums/Direction.d.ts" />
-/// <reference path="enums/DoorSlot.d.ts" />
-/// <reference path="enums/EntityCollisionClass.d.ts" />
-/// <reference path="enums/EntityGridCollisionClass.d.ts" />
-/// <reference path="enums/EntityPartition.d.ts" />
-/// <reference path="enums/EntityType.d.ts" />
-/// <reference path="enums/GridCollisionClass.d.ts" />
-/// <reference path="enums/GridEntityType.d.ts" />
-/// <reference path="enums/GridRooms.d.ts" />
-/// <reference path="enums/InputHook.d.ts" />
-/// <reference path="enums/ItemPoolType.d.ts" />
-/// <reference path="enums/ItemType.d.ts" />
-/// <reference path="enums/Keyboard.d.ts" />
-/// <reference path="enums/LaserOffset.d.ts" />
-/// <reference path="enums/LevelCurse.d.ts" />
-/// <reference path="enums/LevelStage.d.ts" />
-/// <reference path="enums/ModCallbacks.d.ts" />
-/// <reference path="enums/Mouse.d.ts" />
-/// <reference path="enums/Music.d.ts" />
-/// <reference path="enums/NpcState.d.ts" />
-/// <reference path="enums/NullItemID.d.ts" />
-/// <reference path="enums/PickupPrice.d.ts" />
-/// <reference path="enums/PillEffect.d.ts" />
-/// <reference path="enums/PlayerForm.d.ts" />
-/// <reference path="enums/PlayerSpriteLayer.d.ts" />
-/// <reference path="enums/PoopSpellType.d.ts" />
-/// <reference path="enums/RenderMode.d.ts" />
-/// <reference path="enums/RoomTransitionAnim.d.ts" />
-/// <reference path="enums/RoomType.d.ts" />
-/// <reference path="enums/SeedEffect.d.ts" />
-/// <reference path="enums/SkinColor.d.ts" />
-/// <reference path="enums/SortingLayer.d.ts" />
-/// <reference path="enums/SoundEffect.d.ts" />
-/// <reference path="enums/StageType.d.ts" />
-/// <reference path="enums/WeaponType.d.ts" />
-
 /** Unofficial Classes and Types */
 
 /// <reference path="unofficial/enumHelpers.d.ts" />
 /// <reference path="unofficial/primitives.d.ts" />
 
-/// <reference path="unofficial/AddCallbackParameters.d.ts" />
 /// <reference path="unofficial/APIVersion.d.ts" />
 /// <reference path="unofficial/BitFlag.d.ts" />
 /// <reference path="unofficial/BitFlag128.d.ts" />
@@ -150,48 +99,7 @@
 /// <reference path="unofficial/PtrHash.d.ts" />
 /// <reference path="unofficial/ReadonlyRoomDescriptor.d.ts" />
 /// <reference path="unofficial/Seed.d.ts" />
-
-/**
- * Unofficial Enums
- *
- * We have to use const enums for these instead of normal enums because the corresponding Lua
- * globals do not exist: https://www.typescriptlang.org/docs/handbook/enums.html
- *
- * Alternatively, we could create new global enums, but that would pollute the global namespace.
- *
- * Some of the official enums repeat themselves inside of the properties. For example,
- * `CollectibleType.COLLECTIBLE_SAD_ONION` is better written as `CollectibleType.SAD_ONION`. As a
- * standard, enums in this file do not use any unnecessary prefixes.
- */
-
-/// <reference path="unofficial/enums/gridEntityState.d.ts" />
-/// <reference path="unofficial/enums/gridEntityVariants.d.ts" />
-/// <reference path="unofficial/enums/roomSubTypes.d.ts" />
-/// <reference path="unofficial/enums/state.d.ts" />
-/// <reference path="unofficial/enums/subTypes.d.ts" />
-/// <reference path="unofficial/enums/variants.d.ts" />
-
-/// <reference path="unofficial/enums/BrokenWatchState.d.ts" />
-/// <reference path="unofficial/enums/CollectibleAnimation.d.ts" />
-/// <reference path="unofficial/enums/Controller.d.ts" />
-/// <reference path="unofficial/enums/ControllerIndex.d.ts" />
-/// <reference path="unofficial/enums/Dimension.d.ts" />
-/// <reference path="unofficial/enums/Ending.d.ts" />
-/// <reference path="unofficial/enums/FadeoutTarget.d.ts" />
-/// <reference path="unofficial/enums/GridEntityXMLType.d.ts" />
-/// <reference path="unofficial/enums/GridPath.d.ts" />
-/// <reference path="unofficial/enums/ItemConfigCardType.d.ts" />
-/// <reference path="unofficial/enums/ItemConfigChargeType.d.ts" />
-/// <reference path="unofficial/enums/LanguageAbbreviation.d.ts" />
-/// <reference path="unofficial/enums/LineCheckMode.d.ts" />
-/// <reference path="unofficial/enums/PlayerItemAnimation.d.ts" />
-/// <reference path="unofficial/enums/PocketItemSlot.d.ts" />
-/// <reference path="unofficial/enums/ProjectilesMode.d.ts" />
-/// <reference path="unofficial/enums/RoomDescriptorDisplayType.d.ts" />
-/// <reference path="unofficial/enums/StageID.d.ts" />
-/// <reference path="unofficial/enums/StageTransition.d.ts" />
-/// <reference path="unofficial/enums/TrinketSlot.d.ts" />
-/// <reference path="unofficial/enums/ZodiacCollectibles.d.ts" />
+/// <reference path="unofficial/ZodiacCollectibles.d.ts" />
 
 /** Definitions for Popular Mods */
 

@@ -1,3 +1,13 @@
+import { ItemPoolType } from "../enums/ItemPoolType";
+import { PillEffect } from "../enums/PillEffect";
+import { RoomType } from "../enums/RoomType";
+import {
+  Card,
+  CollectibleType,
+  PillColor,
+  TrinketType,
+} from "./enums/subTypes";
+
 declare interface ItemPool {
   AddBibleUpgrade(add: int, itemPoolType: ItemPoolType): void;
   AddRoomBlacklist(collectibleType: CollectibleType | int): void;
@@ -14,7 +24,7 @@ declare interface ItemPool {
    * @param itemPoolType
    * @param decrease Default is false.
    * @param seed Default is `Random()`.
-   * @param defaultItem Default is `CollectibleType.COLLECTIBLE_NULL`.
+   * @param defaultItem Default is `CollectibleType.NULL`.
    */
   GetCollectible(
     itemPoolType: ItemPoolType,

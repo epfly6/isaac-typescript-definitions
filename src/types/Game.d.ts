@@ -1,6 +1,19 @@
+import { BackdropType } from "../enums/BackdropType";
+import { Challenge } from "../enums/Challenge";
+import { EffectVariant } from "../enums/collections/variants";
+import { Difficulty } from "../enums/Difficulty";
+import { Dimension } from "../enums/Dimension";
+import { Direction } from "../enums/Direction";
+import { Ending } from "../enums/Ending";
+import { EntityType } from "../enums/EntityType";
+import { FadeoutTarget } from "../enums/FadeoutTarget";
 import { DamageFlag } from "../enums/flags/DamageFlag";
-import { GameStateFlag } from "../enums/flags/GameStateFlag";
 import { TearFlag } from "../enums/flags/TearFlag";
+import { GameStateFlag } from "../enums/GameStateFlag";
+import { LevelStage } from "../enums/LevelStage";
+import { RoomTransitionAnim } from "../enums/RoomTransitionAnim";
+import { StageTransition } from "../enums/StageTransition";
+import { ItemPool } from "./ItemPool";
 
 declare global {
   function Game(this: void): Game;
@@ -187,7 +200,7 @@ declare global {
 
     /**
      * @param frameCount
-     * @param hallucinationBackdrop Default is `BackdropType.NUM_BACKDROPS`.
+     * @param hallucinationBackdrop Default is a null backdrop.
      */
     ShowHallucination(
       frameCount: int,

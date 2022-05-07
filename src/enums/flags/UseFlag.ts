@@ -11,7 +11,7 @@ const UseFlagInternal = {
    *
    * 1 << 1
    */
-  NO_ADD_COSTUME: 1 << 1,
+  NO_COSTUME: 1 << 1,
 
   /**
    * Effect was triggered by an active item owned by the player.

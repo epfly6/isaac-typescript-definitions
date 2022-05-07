@@ -3,16 +3,16 @@
  * "scripts/main.lua" file.
  */
 declare interface Mod {
-  AddCallback<T extends keyof AddCallbackParameters>(
+  AddCallback<T extends keyof AddCallbackParameter>(
     modCallbacks: T,
-    ...args: AddCallbackParameters[T]
+    ...args: AddCallbackParameter[T]
   ): void;
 
   HasData(): boolean;
   LoadData(): string;
-  RemoveCallback<T extends keyof AddCallbackParameters>(
+  RemoveCallback<T extends keyof AddCallbackParameter>(
     modCallbacks: ModCallbacks,
-    ...args: AddCallbackParameters[T]
+    ...args: AddCallbackParameter[T]
   ): void;
   RemoveData(): void;
   SaveData(data: string): void;

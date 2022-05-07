@@ -1,6 +1,13 @@
 // cspell: words STAGEAPI
 
+import { Direction } from "../../enums/Direction";
+import { DoorSlot } from "../../enums/DoorSlot";
+import { GridEntityType } from "../../enums/GridEntityType";
+import { LevelStage } from "../../enums/LevelStage";
 import { RoomShape } from "../../enums/RoomShape";
+import { RoomTransitionAnim } from "../../enums/RoomTransitionAnim";
+import { RoomType } from "../../enums/RoomType";
+import { StageType } from "../../enums/StageType";
 
 declare global {
   const StageAPI: StageAPIInterface | undefined;
