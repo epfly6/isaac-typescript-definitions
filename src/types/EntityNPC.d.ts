@@ -1,123 +1,133 @@
-declare interface EntityNPC extends Entity {
-  AnimWalkFrame(
-    horizontalAnim: string,
-    verticalAnim: string,
-    speedThreshold: float,
-  ): void;
+import { ChampionColor } from "../enums/ChampionColor";
+import { EntityType } from "../enums/EntityType";
+import { NpcState } from "../enums/NpcState";
+import { ProjectilesMode } from "../enums/ProjectilesMode";
+import { SoundEffect } from "../enums/SoundEffect";
 
-  CalcTargetPosition(distanceLimit: float): Vector;
-  CanBeDamagedFromVelocity(velocity: Vector): boolean;
-  CanReroll(): boolean;
+declare global {
+  interface EntityNPC extends Entity {
+    AnimWalkFrame(
+      horizontalAnim: string,
+      verticalAnim: string,
+      speedThreshold: float,
+    ): void;
 
-  FireBossProjectiles(
-    numProjectiles: int,
-    targetPos: Vector,
-    trajectoryModifier: float,
-    projectileParams: ProjectileParams,
-  ): EntityProjectile;
+    CalcTargetPosition(distanceLimit: float): Vector;
+    CanBeDamagedFromVelocity(velocity: Vector): boolean;
+    CanReroll(): boolean;
 
-  FireProjectiles(
-    position: Vector,
-    velocity: Vector,
-    projectilesMode: ProjectilesMode,
-    projectileParams: ProjectileParams,
-  ): void;
+    FireBossProjectiles(
+      numProjectiles: int,
+      targetPos: Vector,
+      trajectoryModifier: float,
+      projectileParams: ProjectileParams,
+    ): EntityProjectile;
 
-  GetAliveEnemyCount(): int;
-  GetBossColorIdx(): int;
-  GetChampionColorIdx(): ChampionColor;
-  GetPlayerTarget(): Entity;
-  IsBoss(): boolean;
-  IsChampion(): boolean;
-  KillUnique(): void;
+    FireProjectiles(
+      position: Vector,
+      velocity: Vector,
+      projectilesMode: ProjectilesMode,
+      projectileParams: ProjectileParams,
+    ): void;
 
-  /**
-   * @param seed
-   * @param championColor The type of champion to turn this enemy into. (-1 results in a random
-   * champion type.) Default is -1.
-   * @param init Set to true when called while initializing the enemy, false otherwise. Default is
-   * false.
-   */
-  MakeChampion(
-    seed: Seed,
-    championColorIdx?: ChampionColor,
-    init?: boolean,
-  ): void;
+    GetAliveEnemyCount(): int;
+    GetBossColorIdx(): int;
+    GetChampionColorIdx(): ChampionColor;
+    GetPlayerTarget(): Entity;
+    IsBoss(): boolean;
+    IsChampion(): boolean;
+    KillUnique(): void;
 
-  MakeSplat(size: float): EntityEffect;
+    /**
+     * @param seed
+     * @param championColor The type of champion to turn this enemy into. (-1 results in a random
+     * champion type.) Default is -1.
+     * @param init Set to true when called while initializing the enemy, false otherwise. Default is
+     * false.
+     */
+    MakeChampion(
+      seed: Seed,
+      championColorIdx?: ChampionColor,
+      init?: boolean,
+    ): void;
 
-  /**
-   * Change the NPC into another one.
-   *
-   * @param entityType
-   * @param variant
-   * @param subType
-   * @param championColorIdx Pass -1 to morph into a non-champion.
-   */
-  Morph(
-    entityType: EntityType | int,
-    variant: int,
-    subType: int,
-    championColorIdx: ChampionColor,
-  ): boolean;
+    MakeSplat(size: float): EntityEffect;
 
-  PlaySound(
-    soundEffect: SoundEffect | int,
-    volume: float,
-    frameDelay: int,
-    loop: boolean,
-    pitch: float,
-  ): void;
+    /**
+     * Change the NPC into another one.
+     *
+     * @param entityType
+     * @param variant
+     * @param subType
+     * @param championColorIdx Pass -1 to morph into a non-champion.
+     */
+    Morph(
+      entityType: EntityType | int,
+      variant: int,
+      subType: int,
+      championColorIdx: ChampionColor,
+    ): boolean;
 
-  QueryNPCsGroup(groupIdx: int): EntityList;
+    PlaySound(
+      soundEffect: SoundEffect | int,
+      volume: float,
+      frameDelay: int,
+      loop: boolean,
+      pitch: float,
+    ): void;
 
-  QueryNPCsSpawnerType(
-    spawnerType: EntityType | int,
-    entityType: EntityType | int,
-    onlyEnemies: boolean,
-  ): EntityList;
+    QueryNPCsGroup(groupIdx: int): EntityList;
 
-  QueryNPCsType(entityType: EntityNPC, variant: int): EntityList;
-  ResetPathFinderTarget(): void;
+    QueryNPCsSpawnerType(
+      spawnerType: EntityType | int,
+      entityType: EntityType | int,
+      onlyEnemies: boolean,
+    ): EntityList;
 
-  // EntityNPC.CanShutDoors conflicts with Entity.CanShutDoors(),
-  // but the latter is deliberately not implemented so that we can use the property in EntityNPC
-  CanShutDoors: boolean;
+    QueryNPCsType(entityType: EntityNPC, variant: int): EntityList;
+    ResetPathFinderTarget(): void;
 
-  readonly ChildNPC: Readonly<EntityNPC>;
-  EntityRef: Entity;
-  GroupIdx: int;
-  I1: int;
-  I2: int;
-  readonly ParentNPC: Readonly<EntityNPC>;
-  Pathfinder: PathFinder;
-  ProjectileCooldown: int;
-  ProjectileDelay: int;
-  Scale: float;
+    /**
+     * The `EntityNPC.CanShutDoors` property conflicts with the `Entity.CanShutDoors` method, but
+     * the latter is deliberately not implemented so that we can utilize the property.
+     */
+    CanShutDoors: boolean;
 
-  /**
-   * This has a type of `NpcState | int` so that other enums can be used to represent more specific
-   * entities.
-   */
-  State: NpcState | int;
+    readonly ChildNPC: Readonly<EntityNPC>;
+    EntityRef: Entity;
+    GroupIdx: int;
+    I1: int;
+    I2: int;
+    readonly ParentNPC: Readonly<EntityNPC>;
+    Pathfinder: PathFinder;
+    ProjectileCooldown: int;
+    ProjectileDelay: int;
+    Scale: float;
 
-  StateFrame: int;
-  V1: Vector;
-  V2: Vector;
-}
+    /**
+     * This has a type of `NpcState | int` so that other enums can be used to represent more
+     * specific entities.
+     */
+    State: NpcState | int;
 
-declare namespace EntityNPC {
-  /**
-   * This function is bugged and returns a read-only version of the EntityNPC class. If you need to
-   * mutate the properties of the spider, then you should spawn it with `Isaac.Spawn()` or
-   * `Game.Spawn()` instead.
-   */
-  function ThrowSpider(
-    this: void,
-    position: Vector,
-    spawner: Entity,
-    targetPos: Vector,
-    big: boolean,
-    yOffset: float,
-  ): Readonly<EntityNPC>;
+    StateFrame: int;
+    V1: Vector;
+    V2: Vector;
+  }
+
+  namespace EntityNPC {
+    /**
+     * This function is bugged and returns a read-only version of the EntityNPC class. If you need
+     * to mutate the properties of the spider, then you should spawn it with `Isaac.Spawn()` or
+     * `Game.Spawn()` instead.
+     */
+    function ThrowSpider(
+      this: void,
+      position: Vector,
+      spawner: Entity,
+      targetPos: Vector,
+      big: boolean,
+      yOffset: float,
+    ): Readonly<EntityNPC>;
+  }
 }

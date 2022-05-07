@@ -1,12 +1,12 @@
-import { ItemPoolType } from "../enums/ItemPoolType";
-import { PillEffect } from "../enums/PillEffect";
-import { RoomType } from "../enums/RoomType";
 import {
   Card,
   CollectibleType,
   PillColor,
   TrinketType,
-} from "./enums/subTypes";
+} from "../enums/collections/subTypes";
+import { ItemPoolType } from "../enums/ItemPoolType";
+import { PillEffect } from "../enums/PillEffect";
+import { RoomType } from "../enums/RoomType";
 
 declare interface ItemPool {
   AddBibleUpgrade(add: int, itemPoolType: ItemPoolType): void;

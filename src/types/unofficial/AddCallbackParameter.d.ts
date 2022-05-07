@@ -1,5 +1,24 @@
 /* eslint-disable @typescript-eslint/member-ordering */
 
+import { ActiveSlot } from "../../enums/ActiveSlot";
+import { ButtonAction } from "../../enums/ButtonAction";
+import {
+  Card,
+  CollectibleType,
+  PillColor,
+  PlayerType,
+  TrinketType,
+} from "../../enums/collections/subTypes";
+import {
+  BombVariant,
+  EffectVariant,
+  FamiliarVariant,
+  LaserVariant,
+  PickupVariant,
+  PlayerVariant,
+  ProjectileVariant,
+  TearVariant,
+} from "../../enums/collections/variants";
 import { EntityType } from "../../enums/EntityType";
 import { CacheFlag } from "../../enums/flags/CacheFlag";
 import { DamageFlag } from "../../enums/flags/DamageFlag";
@@ -23,7 +42,7 @@ declare global {
         rng: RNG,
         player: EntityPlayer,
         useFlags: BitFlags<UseFlag>,
-        activeSlot: int,
+        activeSlot: ActiveSlot,
         customVarData: int,
       ) =>
         | boolean
@@ -116,7 +135,7 @@ declare global {
         rng: RNG,
         player: EntityPlayer,
         useFlags: BitFlags<UseFlag>,
-        activeSlot: int,
+        activeSlot: ActiveSlot,
         customVarData: int,
       ) => boolean | void,
       collectibleType?: CollectibleType | int,

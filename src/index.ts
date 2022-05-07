@@ -1,10 +1,9 @@
 /// <reference path="types/index.d.ts" />
 
-// TODO CHECK ENUM COUNT AFTER ALL ARE MOVED
-
 export * from "./enums/ActiveSlot";
 export * from "./enums/BackdropType";
 export * from "./enums/BrokenWatchState";
+export * from "./enums/ButtonAction";
 export * from "./enums/Challenge";
 export * from "./enums/ChampionColor";
 export * from "./enums/CollectibleAnimation";
@@ -29,6 +28,7 @@ export * from "./enums/GridRoom";
 export * from "./enums/InputHook";
 export * from "./enums/ItemConfigCardType";
 export * from "./enums/ItemConfigChargeType";
+export * from "./enums/ItemConfigPillEffectClass";
 export * from "./enums/ItemConfigPillEffectType";
 export * from "./enums/ItemPoolType";
 export * from "./enums/ItemType";
@@ -66,6 +66,12 @@ export * from "./enums/StageTransition";
 export * from "./enums/StageType";
 export * from "./enums/TrinketSlot";
 export * from "./enums/WeaponType";
+export * from "./enums/collections/gridEntityState";
+export * from "./enums/collections/gridEntityVariants";
+export * from "./enums/collections/roomSubTypes";
+export * from "./enums/collections/state";
+export * from "./enums/collections/subTypes";
+export * from "./enums/collections/variants";
 export * from "./enums/flags/ActionTrigger";
 export * from "./enums/flags/CacheFlag";
 export * from "./enums/flags/DamageFlag";

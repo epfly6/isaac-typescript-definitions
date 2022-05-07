@@ -5,7 +5,5 @@
     "./dictionaries/isaac/cspell-ext.json",
     "./dictionaries/isaacscript/cspell-ext.json"
   ],
-  "words": [
-    "atomicobject"
-  ]
+  "files": ["**"]
 }

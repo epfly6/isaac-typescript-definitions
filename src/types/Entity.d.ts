@@ -1,3 +1,7 @@
+import { BossID } from "../enums/collections/roomSubTypes";
+import { EntityCollisionClass } from "../enums/EntityCollisionClass";
+import { EntityGridCollisionClass } from "../enums/EntityGridCollisionClass";
+import { EntityType } from "../enums/EntityType";
 import { DamageFlag } from "../enums/flags/DamageFlag";
 import { EntityFlag } from "../enums/flags/EntityFlag";
 

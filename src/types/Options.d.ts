@@ -1,162 +1,167 @@
 // Options are listed in order of how they appear in the in-game options menu
 // (rather than alphabetically)
-declare namespace Options {
-  /**
-   * How loud the non-music sound effects should be.
-   * This can be changed from the in-game options menu.
-   * Valid values are from 0-1.
-   */
-  let SFXVolume: float;
 
-  /**
-   * How loud the in-game music should be.
-   * This can be changed from the in-game options menu.
-   * Valid values are from 0-1.
-   */
-  let MusicVolume: float;
+import { LanguageAbbreviation } from "../enums/LanguageAbbreviation";
 
-  /**
-   * How faded the in-game map will be.
-   * This can be changed from the in-game options menu.
-   * Valid values are from 0-1.
-   */
-  let MapOpacity: float;
+declare global {
+  namespace Options {
+    /**
+     * How loud the non-music sound effects should be.
+     * This can be changed from the in-game options menu.
+     * Valid values are from 0-1.
+     */
+    let SFXVolume: float;
 
-  /** This can be changed from the in-game options menu. */
-  let Fullscreen: boolean;
+    /**
+     * How loud the in-game music should be.
+     * This can be changed from the in-game options menu.
+     * Valid values are from 0-1.
+     */
+    let MusicVolume: float;
 
-  /**
-   * The filter is a setting that makes the game look more like the Flash version (i.e. Wrath of the
-   * Lamb).
-   * This can be changed from the in-game options menu.
-   */
-  let Filter: boolean;
+    /**
+     * How faded the in-game map will be.
+     * This can be changed from the in-game options menu.
+     * Valid values are from 0-1.
+     */
+    let MapOpacity: float;
 
-  /**
-   * This can be changed from the in-game options menu.
-   * Valid values are from 0.5-1.5.
-   */
-  let Gamma: float;
+    /** This can be changed from the in-game options menu. */
+    let Fullscreen: boolean;
 
-  /**
-   * Whether or not achievement pop-ups will display
-   * (e.g. "A Small Rock has appeared in the basement").
-   * This can be changed from the in-game options menu.
-   */
-  let DisplayPopups: boolean;
+    /**
+     * The filter is a setting that makes the game look more like the Flash version (i.e. Wrath of
+     * the Lamb).
+     * This can be changed from the in-game options menu.
+     */
+    let Filter: boolean;
 
-  /**
-   * This can be changed from the in-game options menu, but only when in the main menu and not in a
-   * run.
-   */
-  const Language: LanguageAbbreviation;
+    /**
+     * This can be changed from the in-game options menu.
+     * Valid values are from 0.5-1.5.
+     */
+    let Gamma: float;
 
-  /**
-   * Toggles the active camera.
-   * This can be changed from the in-game options menu.
-   * 1: on, 2: off.
-   */
-  let CameraStyle: 1 | 2;
+    /**
+     * Whether or not achievement pop-ups will display
+     * (e.g. "A Small Rock has appeared in the basement").
+     * This can be changed from the in-game options menu.
+     */
+    let DisplayPopups: boolean;
 
-  /**
-   * Sets the style of the Extra HUD (i.e. the in-game item tracker).
-   * This can be changed from the in-game options menu.
-   * 0: off, 1: on, 2: mini.
-   */
-  let ExtraHUDStyle: 0 | 1 | 2;
+    /**
+     * This can be changed from the in-game options menu, but only when in the main menu and not in
+     * a run.
+     */
+    const Language: LanguageAbbreviation;
 
-  /**
-   * This can be changed from the in-game options menu.
-   * Valid values are from 0-1.
-   */
-  let HUDOffset: float;
+    /**
+     * Toggles the active camera.
+     * This can be changed from the in-game options menu.
+     * 1: on, 2: off.
+     */
+    let CameraStyle: 1 | 2;
 
-  /**
-   * The Found HUD is the in-game stat menu. The name is a reference to MissingHUD, which was a stat
-   * HUD added by a mod.
-   * This can be changed from the in-game options menu.
-   */
-  let FoundHUD: boolean;
+    /**
+     * Sets the style of the Extra HUD (i.e. the in-game item tracker).
+     * This can be changed from the in-game options menu.
+     * 0: off, 1: on, 2: mini.
+     */
+    let ExtraHUDStyle: 0 | 1 | 2;
 
-  /**
-   * Toggles charge bars that show the charging progress for items like Brimstone.
-   * This can be changed from the in-game options menu.
-   */
-  let ChargeBars: boolean;
+    /**
+     * This can be changed from the in-game options menu.
+     * Valid values are from 0-1.
+     */
+    let HUDOffset: float;
 
-  /**
-   * Toggles a shiny effect added to enemy projectiles.
-   * This can be changed from the in-game options menu.
-   */
-  let BulletVisibility: boolean;
+    /**
+     * The Found HUD is the in-game stat menu. The name is a reference to MissingHUD, which was a
+     * stat HUD added by a mod.
+     * This can be changed from the in-game options menu.
+     */
+    let FoundHUD: boolean;
 
-  /**
-   * Whether the announcer voice should play when using items, pills, cards, and runes.
-   * This cannot be changed in-game and is only exposed in the "options.ini" file.
-   * 0: random, 1: always off, 2: always on.
-   */
-  let AnnouncerVoiceMode: 0 | 1 | 2;
+    /**
+     * Toggles charge bars that show the charging progress for items like Brimstone.
+     * This can be changed from the in-game options menu.
+     */
+    let ChargeBars: boolean;
 
-  /**
-   * How big the text in the debug console should be.
-   * This cannot be changed in-game and is only exposed in the "options.ini" file.
-   * 0: default, 1: small, 2: tiny.
-   */
-  let ConsoleFont: 0 | 1 | 2;
+    /**
+     * Toggles a shiny effect added to enemy projectiles.
+     * This can be changed from the in-game options menu.
+     */
+    let BulletVisibility: boolean;
 
-  /** This cannot be changed in-game and is only exposed in the "options.ini" file. */
-  let DebugConsoleEnabled: boolean;
+    /**
+     * Whether the announcer voice should play when using items, pills, cards, and runes.
+     * This cannot be changed in-game and is only exposed in the "options.ini" file.
+     * 0: random, 1: always off, 2: always on.
+     */
+    let AnnouncerVoiceMode: 0 | 1 | 2;
 
-  /**
-   * When enabled, Lua errors and other console output will be shown in-game without having to
-   * manually bring up the console.
-   * This cannot be changed in-game and is only exposed in the "options.ini" file.
-   */
-  let FadedConsoleDisplay: boolean;
+    /**
+     * How big the text in the debug console should be.
+     * This cannot be changed in-game and is only exposed in the "options.ini" file.
+     * 0: default, 1: small, 2: tiny.
+     */
+    let ConsoleFont: 0 | 1 | 2;
 
-  /**
-   * How big the window can be before the game changes the rendering to fill the screen.
-   * This cannot be changed in-game and is only exposed in the "options.ini" file.
-   * Valid values are from 1-99.
-   */
-  let MaxRenderScale: int;
+    /** This cannot be changed in-game and is only exposed in the "options.ini" file. */
+    let DebugConsoleEnabled: boolean;
 
-  /**
-   * This cannot be changed in-game and is only exposed in the "options.ini" file.
-   * Valid values are from 1-99.
-   */
-  let MaxScale: int;
+    /**
+     * When enabled, Lua errors and other console output will be shown in-game without having to
+     * manually bring up the console.
+     * This cannot be changed in-game and is only exposed in the "options.ini" file.
+     */
+    let FadedConsoleDisplay: boolean;
 
-  /**
-   * Whether the mouse can be used to shoot tears and control items like Epic Fetus or Marked.
-   * This cannot be changed in-game and is only exposed in the "options.ini" file.
-   */
-  let MouseControl: boolean;
+    /**
+     * How big the window can be before the game changes the rendering to fill the screen.
+     * This cannot be changed in-game and is only exposed in the "options.ini" file.
+     * Valid values are from 1-99.
+     */
+    let MaxRenderScale: int;
 
-  /**
-   * Whether the game will automatically pause if you switch to a different program.
-   * This cannot be changed in-game and is only exposed in the "options.ini" file.
-   */
-  let PauseOnFocusLost: boolean;
+    /**
+     * This cannot be changed in-game and is only exposed in the "options.ini" file.
+     * Valid values are from 1-99.
+     */
+    let MaxScale: int;
 
-  /**
-   * Whether or not the rumble feature is enabled for controller players.
-   * This cannot be changed in-game and is only exposed in the "options.ini" file.
-   */
-  let RumbleEnabled: boolean;
+    /**
+     * Whether the mouse can be used to shoot tears and control items like Epic Fetus or Marked.
+     * This cannot be changed in-game and is only exposed in the "options.ini" file.
+     */
+    let MouseControl: boolean;
 
-  /**
-   * Whether or not the game will save the history of executed debug console commands.
-   * This cannot be changed in-game and is only exposed in the "options.ini" file.
-   */
-  let SaveCommandHistory: boolean;
+    /**
+     * Whether the game will automatically pause if you switch to a different program.
+     * This cannot be changed in-game and is only exposed in the "options.ini" file.
+     */
+    let PauseOnFocusLost: boolean;
 
-  /**
-   * This only takes effect if the `Fullscreen` option is also set to true.
-   * This cannot be changed in-game and is only exposed in the "options.ini" file.
-   */
-  let UseBorderlessFullscreen: boolean;
+    /**
+     * Whether or not the rumble feature is enabled for controller players.
+     * This cannot be changed in-game and is only exposed in the "options.ini" file.
+     */
+    let RumbleEnabled: boolean;
 
-  /** This cannot be changed in-game and is only exposed in the "options.ini" file. */
-  let VSync: boolean;
+    /**
+     * Whether or not the game will save the history of executed debug console commands.
+     * This cannot be changed in-game and is only exposed in the "options.ini" file.
+     */
+    let SaveCommandHistory: boolean;
+
+    /**
+     * This only takes effect if the `Fullscreen` option is also set to true.
+     * This cannot be changed in-game and is only exposed in the "options.ini" file.
+     */
+    let UseBorderlessFullscreen: boolean;
+
+    /** This cannot be changed in-game and is only exposed in the "options.ini" file. */
+    let VSync: boolean;
+  }
 }

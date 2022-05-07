@@ -1,3 +1,8 @@
+import { DoorVariant } from "../enums/collections/gridEntityVariants";
+import { Direction } from "../enums/Direction";
+import { DoorSlot } from "../enums/DoorSlot";
+import { RoomType } from "../enums/RoomType";
+
 declare interface GridEntityDoor extends GridEntity {
   Bar(): void;
   CanBlowOpen(): boolean;

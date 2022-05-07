@@ -1,3 +1,5 @@
+import { Music } from "../enums/Music";
+
 declare function MusicManager(this: void): MusicManager;
 
 declare interface MusicManager {

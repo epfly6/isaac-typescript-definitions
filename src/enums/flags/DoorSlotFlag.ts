@@ -1,3 +1,5 @@
+import { DoorSlot } from "../DoorSlot";
+
 /** For GridEntityType.DOOR (16) */
 const DoorSlotFlagInternal = {
   /** 1 << 0 */

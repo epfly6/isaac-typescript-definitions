@@ -1,19 +1,23 @@
-declare interface ActiveItemDesc {
-  BatteryCharge: int;
-  Charge: int;
-  Item: CollectibleType | int;
+import { CollectibleType } from "../enums/collections/subTypes";
 
-  /** How close the item is to gaining another charge (0-1 range, used by 4.5 Volt). */
-  PartialCharge: float;
+declare global {
+  interface ActiveItemDesc {
+    BatteryCharge: int;
+    Charge: int;
+    Item: CollectibleType | int;
 
-  /**
-   * Number of frames before an item with a timed cooldown can recharge again.
-   * (Used by Spin To Win to pause its recharge after fully discharging it.)
-   */
-  TimedRechargeCooldown: int;
+    /** How close the item is to gaining another charge (0-1 range, used by 4.5 Volt). */
+    PartialCharge: float;
 
-  /**
-   * Holds extra information for some active items (such as the number of uses for Jar of Wisps)
-   */
-  VarData: int;
+    /**
+     * Number of frames before an item with a timed cooldown can recharge again.
+     * (Used by Spin To Win to pause its recharge after fully discharging it.)
+     */
+    TimedRechargeCooldown: int;
+
+    /**
+     * Holds extra information for some active items (such as the number of uses for Jar of Wisps)
+     */
+    VarData: int;
+  }
 }

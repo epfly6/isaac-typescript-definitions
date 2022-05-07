@@ -1,4 +1,10 @@
+import { Dimension } from "../../enums/Dimension";
+import { EntityType } from "../../enums/EntityType";
+import { GridEntityType } from "../../enums/GridEntityType";
+import { LevelStage } from "../../enums/LevelStage";
 import { RoomShape } from "../../enums/RoomShape";
+import { RoomType } from "../../enums/RoomType";
+import { StageType } from "../../enums/StageType";
 
 declare global {
   interface StageAPIBackdrop {

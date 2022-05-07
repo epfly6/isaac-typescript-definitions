@@ -1,3 +1,7 @@
+import { Challenge } from "../enums/Challenge";
+import { LevelStage } from "../enums/LevelStage";
+import { SeedEffect } from "../enums/SeedEffect";
+
 declare interface Seeds {
   AddSeedEffect(seedEffect: SeedEffect): void;
   CanAddSeedEffect(seedEffect: SeedEffect): boolean;

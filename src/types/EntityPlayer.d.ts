@@ -1,5 +1,15 @@
 import { ActiveSlot } from "../enums/ActiveSlot";
 import { CollectibleAnimation } from "../enums/CollectibleAnimation";
+import {
+  BabySubType,
+  Card,
+  CollectibleType,
+  DipFamiliarSubType,
+  PillColor,
+  PlayerType,
+  TrinketType,
+} from "../enums/collections/subTypes";
+import { BombVariant, FamiliarVariant } from "../enums/collections/variants";
 import { ControllerIndex } from "../enums/ControllerIndex";
 import { Direction } from "../enums/Direction";
 import { CacheFlag } from "../enums/flags/CacheFlag";
@@ -16,16 +26,8 @@ import { PoopSpellType } from "../enums/PoopSpellType";
 import { SkinColor } from "../enums/SkinColor";
 import { TrinketSlot } from "../enums/TrinketSlot";
 import { WeaponType } from "../enums/WeaponType";
-import {
-  BabySubType,
-  Card,
-  CollectibleType,
-  DipFamiliarSubType,
-  PillColor,
-  PlayerType,
-  TrinketType,
-} from "./enums/subTypes";
-import { BombVariant, FamiliarVariant } from "./enums/variants";
+import { TemporaryEffects } from "./TemporaryEffects";
+import { EntitySubPlayer } from "./unofficial/EntitySubPlayer";
 
 declare global {
   interface EntityPlayer extends Entity {

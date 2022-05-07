@@ -1,3 +1,6 @@
+import { CollectibleType, TrinketType } from "../enums/collections/subTypes";
+import { NullItemID } from "../enums/NullItemID";
+
 declare interface TemporaryEffects {
   /**
    * This will only work properly with specific collectibles.

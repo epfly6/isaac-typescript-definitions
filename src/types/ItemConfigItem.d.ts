@@ -1,5 +1,7 @@
 import { CacheFlag } from "../enums/flags/CacheFlag";
-import { ItemConfigTag } from "../enums/unofficial/flags/ItemConfigTag";
+import { ItemConfigTag } from "../enums/flags/ItemConfigTag";
+import { ItemConfigChargeType } from "../enums/ItemConfigChargeType";
+import { ItemType } from "../enums/ItemType";
 
 declare global {
   interface ItemConfigItem {

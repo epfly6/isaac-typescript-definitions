@@ -1,4 +1,5 @@
-import { TargetFlag } from "../enums/unofficial/flags/TargetFlag";
+import { Direction } from "../enums/Direction";
+import { TargetFlag } from "../enums/flags/TargetFlag";
 
 declare global {
   interface EntityFamiliar extends Entity {

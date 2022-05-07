@@ -14,6 +14,7 @@ import { LevelStage } from "../enums/LevelStage";
 import { RoomTransitionAnim } from "../enums/RoomTransitionAnim";
 import { StageTransition } from "../enums/StageTransition";
 import { ItemPool } from "./ItemPool";
+import { Seeds } from "./Seeds";
 
 declare global {
   function Game(this: void): Game;

@@ -1,10 +1,13 @@
-// This is a global exposed as part of ModConfigMenu
+import { Keyboard } from "../../enums/Keyboard";
 
-declare const InputHelper: InputHelperInterface | undefined;
+declare global {
+  /** This is a global variable exposed as part of ModConfigMenu. */
+  const InputHelper: InputHelperInterface | undefined;
 
-declare interface InputHelperInterface {
-  KeyboardPressed(this: void, key: Keyboard, controllerIndex: int): boolean;
+  interface InputHelperInterface {
+    KeyboardPressed(this: void, key: Keyboard, controllerIndex: int): boolean;
 
-  ControllerToString: LuaTable<Keyboard, string | undefined>;
-  KeyboardToString: LuaTable<Keyboard, string | undefined>;
+    ControllerToString: LuaTable<Keyboard, string | undefined>;
+    KeyboardToString: LuaTable<Keyboard, string | undefined>;
+  }
 }

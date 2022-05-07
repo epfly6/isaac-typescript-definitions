@@ -1,5 +1,9 @@
+import { Dimension } from "../../enums/Dimension";
+import { DoorSlot } from "../../enums/DoorSlot";
+import { EntityType } from "../../enums/EntityType";
+import { DisplayFlag } from "../../enums/flags/DisplayFlag";
 import { RoomShape } from "../../enums/RoomShape";
-import { DisplayFlag } from "../../enums/unofficial/flags/DisplayFlag";
+import { RoomType } from "../../enums/RoomType";
 
 declare global {
   const MinimapAPI: MinimapAPIInterface | undefined;

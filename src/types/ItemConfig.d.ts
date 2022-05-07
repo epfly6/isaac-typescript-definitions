@@ -1,3 +1,8 @@
+import {
+  Card,
+  CollectibleType,
+  TrinketType,
+} from "../enums/collections/subTypes";
 import { NullItemID } from "../enums/NullItemID";
 import { PillEffect } from "../enums/PillEffect";
 

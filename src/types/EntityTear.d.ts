@@ -1,3 +1,4 @@
+import { TearVariant } from "../enums/collections/variants";
 import { TearFlag } from "../enums/flags/TearFlag";
 
 declare global {

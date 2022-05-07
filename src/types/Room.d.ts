@@ -1,4 +1,15 @@
+import { BackdropType } from "../enums/BackdropType";
+import { BrokenWatchState } from "../enums/BrokenWatchState";
+import { BossID } from "../enums/collections/roomSubTypes";
+import { CollectibleType } from "../enums/collections/subTypes";
+import { DoorSlot } from "../enums/DoorSlot";
+import { GridCollisionClass } from "../enums/GridCollisionClass";
+import { GridEntityType } from "../enums/GridEntityType";
+import { LineCheckMode } from "../enums/LineCheckMode";
+import { RenderMode } from "../enums/RenderMode";
 import { RoomShape } from "../enums/RoomShape";
+import { RoomType } from "../enums/RoomType";
+import { GridEntityDoor } from "./GridEntityDoor";
 
 declare global {
   interface Room {

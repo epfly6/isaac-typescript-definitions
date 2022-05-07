@@ -1,3 +1,5 @@
+import { Card, CollectibleType } from "../../enums/collections/subTypes";
+
 /**
  * This is a "fake" interface used to represent an `EntityPlayer` class returned from the
  * `EntityPlayer.GetSubPlayer` method. The `EntityPlayer.IsSubPlayer` method should always return
