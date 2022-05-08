@@ -65,7 +65,7 @@ declare global {
     /** Returns the current room's grid index. */
     GetCurrentRoomIndex(): int;
 
-    // cspell:words Maldición oscuridad
+    // cspell:ignore Maldición oscuridad
 
     /**
      * Returns the name of the current floor's curse, like "Curse of the Unknown!". If there are two

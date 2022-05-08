@@ -30,7 +30,7 @@ declare global {
 
   interface StageAPICustomGrid {
     Spawn(
-      grindex: number, // cspell:disable-line
+      grindex: number, // cspell:ignore grindex
       force: boolean,
       reSpawning: boolean,
       initialPersistData: unknown,
@@ -318,7 +318,7 @@ declare global {
     RenderPos: Vector | undefined;
     SmallFont: Font | undefined;
     SpriteOffset: Vector | undefined;
-    Spritesheet: string | undefined; // cspell:disable-line
+    Spritesheet: string | undefined;
     Text: string;
     TextOffset: Vector;
   }
@@ -330,7 +330,7 @@ declare global {
   }
 
   interface StageAPIBossData {
-    Bossname: string; // cspell:disable-line
+    Bossname: string; // cspell:ignore Bossname
     Name: string;
     Portrait: string;
     Rooms: StageAPIRoomsList;

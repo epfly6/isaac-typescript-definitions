@@ -147,7 +147,7 @@ declare global {
      */
     MenuData: LuaTable<int, ModConfigMenuData>;
 
-    // cspell:words modconfig
+    // cspell:ignore modconfig
 
     PopupGfx: {
       /* eslint-disable @typescript-eslint/member-ordering */

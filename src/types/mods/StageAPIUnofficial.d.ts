@@ -1,4 +1,4 @@
-// cspell: word STAGEAPI GRIDENTITY
+// cspell:ignore STAGEAPI GRIDENTITY
 
 import { DoorSlot } from "../../enums/DoorSlot";
 
@@ -102,9 +102,9 @@ declare global {
   }
 
   interface StageAPILuaRoomGenericEntity {
-    GRIDX: int; // cspell: disable-line
-    GRIDY: int; // cspell: disable-line
-    ISDOOR: boolean; // cspell: disable-line
+    GRIDX: int; // cspell:ignore GRIDX
+    GRIDY: int; // cspell:ignore GRIDY
+    ISDOOR: boolean; // cspell:ignore ISDOOR
   }
 
   const enum StageAPIPickupRandomGroupVariant {

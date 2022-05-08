@@ -48,6 +48,7 @@ DECAP
 DERP
 despawn
 DINGA
+DONT
 DOPLE
 DUKIE
 ECOLI
@@ -95,11 +96,13 @@ Lachryphagy
 lazarusshared
 lazarussharedglobal
 Lemegeton
+Lerp
 LOKII
 LOKIS
 LONGLEGS
 luadebug
 luamod
+luasocket
 Ludovico
 MAGGY
 MAGGYS
@@ -174,8 +177,10 @@ SPIKEBALL
 SPINDOWN
 SPITTY
 SPLURT
+Spritesheet
 SQUEEZY
 steamapps
+steampowered
 STOMPY
 SUCKY
 summonable
@@ -186,10 +191,12 @@ SYNTHOIL
 TAMMYS
 Tearflag
 tearsup
+tecgraf
 TELEPILLS
 TELEPORTER
 TINYTOMA
 TMTRAINER
+Traceback
 TRIACHNID
 Trisagion
 TROPICAMIDE
@@ -205,5 +212,6 @@ VURP
 WAKA
 WILLO
 WIZOOB
+wofsauge
 XXXXXXXXL
 YBAB

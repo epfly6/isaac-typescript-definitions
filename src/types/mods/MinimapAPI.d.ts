@@ -53,7 +53,7 @@ declare global {
       variant: number,
       subtype: number,
       func: (pickup: EntityPickup) => boolean | undefined,
-      icongroup: string | number, // cspell:disable-line
+      icongroup: string | number, // cspell:ignore icongroup
       priority: number,
     ): MinimapAPIRoomDescriptor;
 
@@ -146,8 +146,8 @@ declare global {
 
     AddRoomShape(
       id: number | string,
-      smallAnims: MinimapAPIRoomAnimsTable, // cspell:disable-line
-      largeAnims: MinimapAPIRoomAnimsTable, // cspell:disable-line
+      smallAnims: MinimapAPIRoomAnimsTable, // cspell:ignore Anims
+      largeAnims: MinimapAPIRoomAnimsTable,
       gridPivot: Vector,
       gridSize: Vector,
       positions: Vector[],
@@ -169,7 +169,7 @@ declare global {
 
     GetPositionRelativeToDoor(
       room: MinimapAPIRoomDescriptor,
-      doorslot: DoorSlot, // cspell:disable-line
+      doorslot: DoorSlot, // cspell:ignore doorslot
     ): Vector;
 
     GetRoom(position: Vector): MinimapAPIRoomDescriptor | undefined;
@@ -266,7 +266,6 @@ declare global {
     sprite: Sprite;
   }
 
-  // cspell:disable-next-line
   interface MinimapAPIRoomAnimsTable {
     RoomCurrent: {
       anim: string;
@@ -274,7 +273,7 @@ declare global {
       sprite: Sprite;
     };
 
-    // cspell:disable-next-line
+    // cspell:ignore Semivisited
     RoomSemivisited: {
       anim: string;
       frame: number;

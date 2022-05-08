@@ -1173,9 +1173,6 @@ export enum Card {
  * For EntityType.PICKUP (5), PickupVariant.PICKUP_TRINKET (350)
  *
  * This is the sub-type of a trinket.
- *
- * Note that the vanilla enum also has values of `TRINKET_GOLDEN_FLAG` and `TRINKET_ID_MASK`, but
- * IsaacScript represents these as constants instead since they are not actually trinket types.
  */
 export enum TrinketType {
   NULL = 0,

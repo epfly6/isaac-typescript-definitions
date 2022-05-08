@@ -78,7 +78,7 @@ declare global {
     /**
      * This variable is true if the mod has fully loaded. False otherwise.
      */
-    Initialised: boolean; // cspell:disable-line
+    Initialised: boolean; // cspell:ignore Initialised
 
     /**
      * The current version of the API. You can check that the right version is installed with your

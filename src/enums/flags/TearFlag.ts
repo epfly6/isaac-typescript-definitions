@@ -711,7 +711,7 @@ export const TearFlag = TearFlagInternal as TearFlagType;
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export type TearFlag = TearFlagType[keyof TearFlagType];
 
-// cspell:disable-next-line
+// cspell:ignore TEARFLAG
 /** Identical to the `TEARFLAG` function in "enums.lua". */
 function getTearFlag(shift: int) {
   return shift >= 64

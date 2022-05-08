@@ -26,7 +26,7 @@ export enum RockState {
   HALF_BROKEN = 4,
 }
 
-/** For GridEntityType.SPIKES_ONOFF (9) */
+/** For GridEntityType.SPIKES_ON_OFF (9) */
 export enum SpikesOnOffState {
   ON = 0,
   OFF = 1,

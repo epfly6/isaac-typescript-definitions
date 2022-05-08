@@ -14,7 +14,8 @@ CSPELL_CONFIGURATION_PATH="$REPO_ROOT/.cspell.json"
 CSPELL_CONFIGURATION_PATH_TEMP="$REPO_ROOT/.cspell-temp.json"
 mv "$CSPELL_CONFIGURATION_PATH" "$CSPELL_CONFIGURATION_PATH_TEMP" # Otherwise the below command won't work properly
 WORDS_PATH="$REPO_ROOT/misspelled-words.txt"
-npx cspell lint --config .cspell-base.json --dot --no-progress --no-summary --unique --words-only | sort --ignore-case --unique > "$WORDS_PATH"
+CSPELL_CONFIGURATION_TEST_PATH="$REPO_ROOT/.cspell-test.json"
+npx cspell lint --config "$CSPELL_CONFIGURATION_TEST_PATH" --dot --no-progress --no-summary --unique --words-only | sort --ignore-case --unique > "$WORDS_PATH"
 mv "$CSPELL_CONFIGURATION_PATH_TEMP" "$CSPELL_CONFIGURATION_PATH"
 
 # Check the custom dictionaries
@@ -37,14 +38,6 @@ for DICTIONARY_NAME in isaac isaacscript; do
   echo "Dictionary is valid: $DICTIONARY_PATH"
 done
 
-# Also check that each ".cspell.json" word is actually being used
-echo "Checking CSpell configuration words."
-CSPELL_CONFIGURATION_WORDS=$(cat "$CSPELL_CONFIGURATION_PATH" | python -c "import sys, json; print('\n'.join(json.load(sys.stdin)['words']))")
-for LINE in $CSPELL_CONFIGURATION_WORDS; do
-  LINE_TRIMMED=$(echo "$LINE" | xargs)
-  echo "Checking for: $LINE_TRIMMED"
-  grep "$LINE_TRIMMED" "$WORDS_PATH" --ignore-case --quiet
-done
-echo "CSpell configuration words are valid."
-
 rm -f "$WORDS_PATH"
+
+echo "All dictionaries are valid."

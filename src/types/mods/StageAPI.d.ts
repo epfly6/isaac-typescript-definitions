@@ -1,4 +1,4 @@
-// cspell: words STAGEAPI
+// cspell:ignore STAGEAPI
 
 import { Direction } from "../../enums/Direction";
 import { DoorSlot } from "../../enums/DoorSlot";
@@ -145,7 +145,7 @@ declare global {
       ) => void,
     ];
 
-    // cspell: disable-next-line
+    // cspell:ignore GRIDENTITY
     [StageAPICallback.PRE_SELECT_GRIDENTITY_LIST]: [
       callback: (gridDataList: unknown, spawnIndex: unknown) => void,
     ];
@@ -363,7 +363,7 @@ declare global {
 
     InOverrideStage(): boolean;
 
-    InOverridenStage(): boolean; // cspell: disable-line
+    InOverridenStage(): boolean; // cspell:ignore Overriden
 
     InitCustomLevel(levelMap: StageAPILevelMap, levelStartRoom: boolean): void;
 

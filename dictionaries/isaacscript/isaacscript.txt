@@ -4,7 +4,6 @@ dotenv
 endoflineblog
 esbenp
 eslintcache
-eslintrc
 fwlink
 gitflow
 gruntjs
@@ -20,6 +19,10 @@ Nuxt
 parceljs
 pids
 reimplement
+reimplemented
+stackoverflow
 tstl
 typedoc
+typescripttolua
+ZAAAAAA
 Zamiell

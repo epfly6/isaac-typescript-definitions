@@ -162,8 +162,6 @@ export enum BossID {
   BEAST = 100,
 
   HORNY_BOYS = 101,
-
-  /** This boss is currently unfinished and there are no boss rooms for it. */
   POSSESSOR = 102,
 }
 

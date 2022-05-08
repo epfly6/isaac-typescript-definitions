@@ -1,6 +1,7 @@
 {
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
-  "loadDefaultConfiguration": false,
+  "loadDefaultConfiguration": true,
   "import": [
       "@cspell/dict-companies/cspell-ext.json",
       "@cspell/dict-en_us/cspell-ext.json",
@@ -16,11 +17,22 @@
       "software-terms",
       "typescript"
   ],
-  "files": [
-      "**"
-  ],
-  "ignorePaths": [
-      ".git",
-      "node_modules"
+  "ignoreRegExpList": [
+    "Base64MultiLine",
+    "Base64SingleLine",
+    "CommitHash",
+    "CommitHashLink",
+    "CSSHexValue",
+    "CStyleHexValue",
+    "Email",
+    "HashStrings",
+    "RsaCert",
+    "SHA",
+    "SpellCheckerDisable",
+    "SpellCheckerIgnoreInDocSetting",
+    "SshRsa",
+    "UnicodeRef",
+    "Urls",
+    "UUID"
   ]
 }

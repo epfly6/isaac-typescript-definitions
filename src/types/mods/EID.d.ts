@@ -129,7 +129,7 @@ declare interface EIDInterface {
     spriteObject: Sprite,
   ): void;
 
-  /** Adds a description for a pilleffect id. */
+  /** Adds a description for a pill effect. */
   addPill(
     id: int,
     description: string,
@@ -237,7 +237,10 @@ declare interface EIDInterface {
    *
    * @returns The string as a table of lines.
    */
-  fitTextToWidth(str: string, textboxWidth: number): string[];
+  fitTextToWidth(
+    str: string,
+    textboxWidth: number, // cspell:ignore textbox
+  ): string[];
 
   /**
    * Generates a string with the defined pixel-length using a custom 1px wide character.
@@ -373,7 +376,7 @@ declare interface EIDInterface {
   /**
    * Returns the icon used for the bullet-point. It will look at the first word in the given string.
    */
-  handleBulletpointIcon(text: string): EIDInlineIcon;
+  handleBulletpointIcon(text: string): EIDInlineIcon; // cspell:ignore Bulletpoint
 
   /** Returns `true`, if curse of blind is active. */
   hasCurseBlind(): boolean;

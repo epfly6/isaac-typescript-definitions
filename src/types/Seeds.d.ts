@@ -22,7 +22,7 @@ declare interface Seeds {
    */
   GetStartSeed(): Seed;
 
-  // cspell:words ABCD EFGH
+  // cspell:ignore ABCD EFGH
 
   /**
    * The "start seed" is a number between 1 and (2^32 - 1) that is used to generate the random
