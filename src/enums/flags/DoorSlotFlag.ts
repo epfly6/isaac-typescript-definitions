@@ -3,28 +3,28 @@ import { DoorSlot } from "../DoorSlot";
 /** For GridEntityType.DOOR (16) */
 const DoorSlotFlagInternal = {
   /** 1 << 0 */
-  LEFT0: 1 << DoorSlot.LEFT0,
+  LEFT_0: 1 << DoorSlot.LEFT_0,
 
   /** 1 << 1 */
-  UP0: 1 << DoorSlot.UP0,
+  UP_0: 1 << DoorSlot.UP_0,
 
   /** 1 << 2 */
-  RIGHT0: 1 << DoorSlot.RIGHT0,
+  RIGHT_0: 1 << DoorSlot.RIGHT_0,
 
   /** 1 << 3 */
-  DOWN0: 1 << DoorSlot.DOWN0,
+  DOWN_0: 1 << DoorSlot.DOWN_0,
 
   /** 1 << 4 */
-  LEFT1: 1 << DoorSlot.LEFT1,
+  LEFT_1: 1 << DoorSlot.LEFT_1,
 
   /** 1 << 5 */
-  UP1: 1 << DoorSlot.UP1,
+  UP_1: 1 << DoorSlot.UP_1,
 
   /** 1 << 6 */
-  RIGHT1: 1 << DoorSlot.RIGHT1,
+  RIGHT_1: 1 << DoorSlot.RIGHT_1,
 
   /** 1 << 7 */
-  DOWN1: 1 << DoorSlot.DOWN1,
+  DOWN_1: 1 << DoorSlot.DOWN_1,
 };
 
 type DoorSlotFlagValue = number & {

@@ -62,8 +62,8 @@ declare interface EIDInterface {
   ): void;
 
   /**
-   * Adds a new color object with the shortcut defined in the "shortcut" variable
-   * (e.g. "{{shortcut}}" = your color).
+   * Adds a new color object with the shortcut defined in the "shortcut" variable (e.g.
+   * "{{shortcut}}" = your color).
    *
    * Shortcuts are case-sensitive! Shortcuts can be overridden with this function to allow for full
    * control over everything.
@@ -78,8 +78,8 @@ declare interface EIDInterface {
   ): void;
 
   /**
-   * Adds Description object modifiers.
-   * Used for altering descriptions. Examples: Spindown dice, Tarot Cloth, etc.
+   * Adds Description object modifiers. Used for altering descriptions. Examples: Spindown Dice,
+   * Tarot Cloth, etc.
    *
    * @param condition A function that returns `true` if `callback` should be called on the given
    * description string.
@@ -106,8 +106,8 @@ declare interface EIDInterface {
   ): void;
 
   /**
-   * Adds a new icon object with the shortcut defined in the "shortcut" variable
-   * (e.g. "{{shortcut}}" = your icon).
+   * Adds a new icon object with the shortcut defined in the "shortcut" variable (e.g.
+   * "{{shortcut}}" = your icon).
    *
    * Shortcuts are case-sensitive! Shortcuts can be overridden with this function to allow for full
    * control over everything.
@@ -171,10 +171,10 @@ declare interface EIDInterface {
   /**
    * Assigns transformations to an entity (Adds to existing transformations).
    *
-   * When type = entity, targetIdentifier must be in the format "ID.Variant.subtype".
-   * For any other type, it can just be the id.
+   * When type = entity, targetIdentifier must be in the format "ID.Variant.subtype". For any other
+   * type, it can just be the id.
    *
-   * EXAMPLE: `EID.assignTransformation("collectible", 1, "My Transformation")`.
+   * Example: `EID.assignTransformation("collectible", 1, "My Transformation")`.
    */
   assignTransformation(
     targetType: EIDTransformationTargetType,
@@ -202,17 +202,16 @@ declare interface EIDInterface {
 
   /**
    * Overrides all potentially displayed texts and permanently displays the given texts. Can be
-   * turned off again using
-   * {@link EID.hidePermanentText EID:hidePermanentText()}.
+   * turned off again using `EID.hidePermanentText`
    */
   displayPermanentText(descriptionObject: EIDDescriptionObject): void;
 
   /**
-   * Filters a given string and looks for `KColor` markup.
-   * Splits the text into subsections limited by them.
+   * Filters a given string and looks for `KColor` markup. Splits the text into subsections limited
+   * by them.
    *
-   * @returns An array of tables containing subsections of the text, their respective `KColor`,
-   * and the width of the subsection.
+   * @returns An array of tables containing subsections of the text, their respective `KColor`, and
+   * the width of the subsection.
    */
   filterColorMarkup(
     text: string,
@@ -220,8 +219,7 @@ declare interface EIDInterface {
   ): Array<[string, KColor, int]>;
 
   /**
-   * Searches through the given string and replaces Icon placeholders with icons.
-   * Returns 2 values:
+   * Searches through the given string and replaces Icon placeholders with icons. Returns 2 values:
    *
    * - The string without the placeholders but with an accurate space between lines.
    * - An array of tables containing each Inline Sprite and the preceding text width.
@@ -312,8 +310,8 @@ declare interface EIDInterface {
   /**
    * Fetches description table from the legacy mod descriptions if they exist.
    *
-   * @returns ["", "", description], ["", name, description],
-   * or `undefined` (if there is no legacy description).
+   * @returns ["", "", description], ["", name, description], or `undefined` (if there is no legacy
+   * description).
    */
   getLegacyModDescription(
     Type: int,
@@ -397,13 +395,15 @@ declare interface EIDInterface {
   loadFont(fontFileName: string): boolean;
 
   /**
-   * Removes a Description object modifier.
-   * Used for altering descriptions. Examples: Spindown dice, Tarot Cloth, etc.
+   * Removes a Description object modifier. Used for altering descriptions.
+   *
+   * Examples: Spindown Dice, Tarot Cloth, etc.
    */
   removeDescriptionModifier(modifierName: string): void;
 
   /**
    * Removes a given value from the string inside a table.
+   *
    * Example: `"1,2,3"`, removing `2` will return `"1,3"`.
    */
   removeEntryFromString(
@@ -422,8 +422,8 @@ declare interface EIDInterface {
   /**
    * Removes a transformation from an entity.
    *
-   * When type = entity, targetIdentifier must be in the format "ID.Variant.subtype".
-   * For any other type, it can just be the id.
+   * When type = entity, targetIdentifier must be in the format "ID.Variant.subtype". For any other
+   * type, it can just be the id.
    *
    * EXAMPLE: `EID.removeTransformation("collectible", 1, "My Transformation")`.
    */
@@ -437,8 +437,7 @@ declare interface EIDInterface {
   renderIcon(spriteObj: Sprite, posX: int, posY: int): void;
 
   /**
-   * Renders a list of given inline sprite objects returned by the
-   * {@link EID.filterIconMarkup EID:filterIconMarkup()} function.
+   * Renders a list of given inline sprite objects returned by the `EID.filterIconMarkup` function.
    *
    * Table entry format: {`EIDInlineIcon` Object, Width of text preceding the icon}.
    */
@@ -449,8 +448,8 @@ declare interface EIDInterface {
   ): void;
 
   /**
-   * Renders a given string using the EID custom font.
-   * This will also apply any markup and render icons.
+   * Renders a given string using the EID custom font. This will also apply any markup and render
+   * icons.
    *
    * Needs to be called in a render callback.
    *
@@ -471,16 +470,16 @@ declare interface EIDInterface {
    *
    * Example input: `{1,2,3,4,5,6,7,8}`
    *
-   * Result: `"{{Crafting8}}{{Crafting7}}{{Crafting6}}{{Crafting5}}{{Crafting4}}{{Crafting3}}{{Crafting2}}{{Crafting1}}"`
+   * Result:
+   * `"{{Crafting8}}{{Crafting7}}{{Crafting6}}{{Crafting5}}{{Crafting4}}{{Crafting3}}{{Crafting2}}{{Crafting1}}"`
    *
-   * Prefer {@link EID.tableToCraftingIconsMerged tableToCraftingIconsMerged()},
-   * due to improved render performance.
+   * Prefer `EID.tableToCraftingIconsMerged` due to improved render performance.
    */
   tableToCraftingIconsFull(craftTable: int[]): string;
 
   /**
-   * Converts a given table into a string containing the crafting icons of the table,
-   * which are also grouped to reduce render lag.
+   * Converts a given table into a string containing the crafting icons of the table, which are also
+   * grouped to reduce render lag.
    *
    * Example input: `{1,1,1,2,2,3,3,3}`.
    *

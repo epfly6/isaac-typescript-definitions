@@ -36,14 +36,14 @@ declare global {
      *
      * - The "normal" state is set by default.
      * - The "changed" state activates when the projectile's frame count reaches the value set in
-     * `ChangeTimeout`.
+     *   `ChangeTimeout`.
      *
      * When the "changed" state is activated, two things happen:
      *
      * - The flags are changed to what was set in `ChangeFlags`. (But this only happens if the
-     * `ProjectileFlag.CHANGE_FLAGS_AFTER_TIMEOUT` flag was set.)
+     *   `ProjectileFlag.CHANGE_FLAGS_AFTER_TIMEOUT` flag was set.)
      * - The velocity is changed to what was set in `ChangeVelocity`. (But this only happens if the
-     * `ProjectileFlag.CHANGE_VELOCITY_AFTER_TIMEOUT` flag was set.
+     *   `ProjectileFlag.CHANGE_VELOCITY_AFTER_TIMEOUT` flag was set.
      */
     ChangeTimeout: int;
 

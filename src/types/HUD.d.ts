@@ -31,9 +31,10 @@ declare global {
     SetVisible(visible: boolean): void;
 
     /**
-     * Accepts a sequence of up to 32 strings, where each string is a line of text.
-     * Passing more than 7 lines will result in them not being displayed properly since the fortune
-     * paper does not dynamically stretch to accommodate the extra lines yet.
+     * Accepts an array of up to 32 strings, where each string is a line of text.
+     *
+     * Passing more than 7 lines will result in them not being displayed properly, since the fortune
+     * paper does not dynamically stretch to accommodate the extra lines.
      *
      * @param text
      */

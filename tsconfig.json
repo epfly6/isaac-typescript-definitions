@@ -2,6 +2,7 @@
 {
   // We extend the standard IsaacScript compiler flags
   // https://github.com/IsaacScript/isaacscript-tsconfig/blob/main/tsconfig.base.json
+  // (we can't extend "tsconfig.mod.json" since it references this repository)
   "extends": "isaacscript-tsconfig/tsconfig.base.json",
 
   // https://www.typescriptlang.org/docs/handbook/compiler-options.html
@@ -14,6 +15,9 @@
 
     // Needed since this is a Lua library
     "declaration": true,
+
+    // Needed to hide internal functions from the auto-complete of end-users
+    "stripInternal": true,
 
     // Recommended as per TypeScriptToLua
     // https://typescripttolua.github.io/docs/getting-started/

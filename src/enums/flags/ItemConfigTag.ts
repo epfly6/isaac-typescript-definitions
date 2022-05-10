@@ -1,6 +1,6 @@
 /**
- * Matches the ItemConfig.TAG_ members of the ItemConfig class. In IsaacScript, we re-implement
- * this as an enum instead, since it is cleaner.
+ * Matches the ItemConfig.TAG_ members of the ItemConfig class. In IsaacScript, we re-implement this
+ * as an enum instead, since it is cleaner.
  */
 const ItemConfigTagInternal = {
   /**
@@ -16,6 +16,7 @@ const ItemConfigTagInternal = {
    * Syringes (for Little Baggy and the Spun! transformation).
    *
    * Equal to "syringe" in "items_metadata.xml".
+   *
    * 1 << 1
    */
   SYRINGE: 1 << 1,

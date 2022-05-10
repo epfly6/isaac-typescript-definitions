@@ -166,7 +166,11 @@ const ProjectileFlagInternal = {
   /** 1 << 52 */
   ACCELERATE_TO_POSITION: 1 << 52,
 
-  /** 1 << 53 */
+  /**
+   * The cluster of tears that Mother shoots.
+   *
+   * 1 << 53
+   */
   BROCCOLI: 1 << 53,
 
   /** 1 << 54 */

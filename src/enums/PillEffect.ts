@@ -1,5 +1,4 @@
 export enum PillEffect {
-  NULL = -1,
   BAD_GAS = 0,
   BAD_TRIP = 1,
   BALLS_OF_STEEL = 2,
@@ -36,7 +35,7 @@ export enum PillEffect {
   ONE_MAKES_YOU_SMALL = 33,
   INFESTED_EXCLAMATION = 34,
   INFESTED_QUESTION = 35,
-  POWER_PILL = 36,
+  POWER = 36,
   RETRO_VISION = 37,
   FRIENDS_TILL_THE_END = 38,
   X_LAX = 39,
@@ -49,5 +48,5 @@ export enum PillEffect {
   VURP = 46,
   SHOT_SPEED_DOWN = 47,
   SHOT_SPEED_UP = 48,
-  EXPERIMENTAL_PILL = 49,
+  EXPERIMENTAL = 49,
 }

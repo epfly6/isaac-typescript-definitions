@@ -1,5 +1,4 @@
 import { Music } from "../../enums/Music";
-import { MusicManager } from "../MusicManager";
 
 declare global {
   const MMC: MusicModCallback | undefined;
@@ -10,15 +9,15 @@ declare global {
      * Adds a callback to be triggered whenever a track is about to play. Used for changing music.
      *
      * @param mod The ModReference for your mod (created with RegisterMod())
-     * @param callback A function that is called every time a track is about to play.
-     * The function should return one of the following:
+     * @param callback A function that is called every time a track is about to play. The function
+     * should return one of the following:
      * - a track ID to play that instead
      * - a LuaMultiReturn<[jingleID: Music, trackID: Music]> to play a jingle and queue the track
      * - 0 to prevent the track from playing, and allow the current one to continue
      * - -1 to stop all music
      * - undefined to continue to internal code
-     * @param tracks The tracks that will trigger your function call.
-     * If this argument is omitted, all music changes will trigger this callback.
+     * @param tracks The tracks that will trigger your function call. If this argument is omitted,
+     * all music changes will trigger this callback.
      */
     AddMusicCallback(
       mod: Mod,
@@ -33,8 +32,8 @@ declare global {
     ): void;
 
     /**
-     * @returns The ID of the intended boss room entry music for this room (e.g. Satan, Mom).
-     * If not in a boss room, it will simply return one of the two generic themes.
+     * @returns The ID of the intended boss room entry music for this room (e.g. Satan, Mom). If not
+     * in a boss room, it will simply return one of the two generic themes.
      */
     GetBossTrack(): Music;
 
@@ -42,8 +41,8 @@ declare global {
      * @returns Either the ID of the current room's music, or a LuaMultiReturn containing the
      * current jingle's ID and the current room's track ID.
      *
-     * WARNING: Using this in an uncleared boss room will return ONLY the boss jingle.
-     * If you want the intended boss music, use `GetBossTrack()`.
+     * WARNING: Using this in an uncleared boss room will return ONLY the boss jingle. If you want
+     * the intended boss music, use `GetBossTrack()`.
      */
     GetMusicTrack(): LuaMultiReturn<
       [currentRoomMusicOrJingle: Music, currentRoomMusic?: Music]
@@ -67,17 +66,17 @@ declare global {
     RemoveMusicCallback(mod: Mod): void;
 
     /**
-     * True if music layers are disabled in favour of a mod that does not allow them.
-     * False by default.
+     * True if music layers are disabled in favour of a mod that does not allow them. False by
+     * default.
+     *
      * Change to true if your mod does not support layers.
+     *
      * This is not associated with the `MusicManager.DisableLayer()` command and takes priority if
      * true.
      */
     DisableMusicLayers: boolean;
 
-    /**
-     * This variable is true if the mod has fully loaded. False otherwise.
-     */
+    /** This variable is true if the mod has fully loaded. False otherwise. */
     Initialised: boolean; // cspell:ignore Initialised
 
     /**

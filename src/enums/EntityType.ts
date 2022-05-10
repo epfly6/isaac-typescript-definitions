@@ -132,8 +132,11 @@ export enum EntityType {
   TUMOR = 229,
   CAMILLO_JR = 230,
   NERVE_ENDING = 231,
+
   // SKINBALL = 232, // Non-existent entity
+
   // MOM_HEAD = 233, // Non-existent entity
+
   ONE_TOOTH = 234,
   GAPING_MAW = 235,
   BROKEN_GAPING_MAW = 236,

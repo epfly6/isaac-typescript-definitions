@@ -9,6 +9,7 @@
  * ```lua
  * local socket = require("socket")
  * ```
+ *
  * (but it requires that the "--luadebug" flag is enabled)
  *
  * The documentation is located at:
@@ -72,11 +73,11 @@ declare interface SocketClient {
    * Pattern can be any of the following:
    *
    * - '*a': reads from the socket until the connection is closed. No end-of-line translation is
-   * performed.
+   *   performed.
    * - '*l': reads a line of text from the socket. The line is terminated by a LF character (ASCII
-   * 10), optionally preceded by a CR character (ASCII 13). The CR and LF characters are not
-   * included in the returned line. In fact, all CR characters are ignored by the pattern. This is
-   * the default pattern.
+   *   10), optionally preceded by a CR character (ASCII 13). The CR and LF characters are not
+   *   included in the returned line. In fact, all CR characters are ignored by the pattern. This is
+   *   the default pattern.
    * - number: causes the method to read a specified number of bytes from the socket.
    *
    * Prefix is an optional string to be concatenated to the beginning of any received data before
@@ -139,10 +140,10 @@ declare interface SocketClient {
    * timeout modes and both can be used together for fine tuning:
    *
    * - 'b': block timeout. Specifies the upper limit on the amount of time LuaSocket can be blocked
-   * by the operating system while waiting for completion of any single I/O operation. This is the
-   * default mode.
+   *   by the operating system while waiting for completion of any single I/O operation. This is the
+   *   default mode.
    * - 't': total timeout. Specifies the upper limit on the amount of time LuaSocket can block a Lua
-   * script before returning from a call.
+   *   script before returning from a call.
    *
    * The nil timeout value allows operations to block indefinitely. Negative timeout values have the
    * same effect.

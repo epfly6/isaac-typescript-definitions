@@ -135,10 +135,10 @@ declare global {
 
     /**
      * Returns the amount of render frames that have passed since the game was open.
+     *
      * The counter for this increases even when the game is paused or when you are in the main menu.
-     * Since Isaac frames are equal to render frames, 60 frames equals 1 second.
-     * Note that these frames are completely different from the frames returned from
-     * `Game().GetFrameCount()` and other functions.
+     * Since Isaac frames are equal to render frames, 60 frames equals 1 second. Note that these
+     * frames are completely different from the frames returned from `game.GetFrameCount` method.
      */
     function GetFrameCount(): int;
 
@@ -156,16 +156,15 @@ declare global {
 
     /**
      * With no argument, it returns the 0th player.
-     * For the purposes of this definition, we assume that the 0th player always exists.
-     * However, if this function is called in the menu, it will return undefined, so beware of this
-     * case.
+     *
+     * For the purposes of this definition, we assume that the 0th player always exists. However, if
+     * this function is called in the menu, it will return undefined, so beware of this case.
      */
     function GetPlayer(): EntityPlayer;
 
     /**
-     * For the purposes of this definition, we assume that the 0th player always exists.
-     * However, if this function is called in the menu, it will return undefined, so beware of this
-     * case.
+     * For the purposes of this definition, we assume that the 0th player always exists. However, if
+     * this function is called in the menu, it will return undefined, so beware of this case.
      */
     function GetPlayer(playerID: 0): EntityPlayer;
 
@@ -219,8 +218,8 @@ declare global {
     function GetSoundIdByName(soundName: string): SoundEffect | int;
 
     /**
-     * Returns the width of the given string in pixels based on the "terminus8" font.
-     * (This is the same font used in the `Isaac.RenderText()` function.)
+     * Returns the width of the given string in pixels based on the "terminus8" font. (This is the
+     * same font used in the `Isaac.RenderText()` function.)
      */
     function GetTextWidth(str: string): int;
 
@@ -261,6 +260,7 @@ declare global {
 
     /**
      * Returns true if your mod has data stored from the `Isaac.SaveModData()` function.
+     *
      * (This corresponds to "save#.dat" files existing in the mod's save data folder.)
      */
     function HasModData(mod: Mod): boolean;
@@ -318,6 +318,7 @@ declare global {
 
     /**
      * Stores a string in a "save#.dat" file for persistent storage across game invocations.
+     *
      * There are 3 "save#.dat" files, one per save slot. The number will be determined automatically
      * by the game. In Repentance, these files are located in the "data" folder next to the "mods"
      * folder.

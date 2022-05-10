@@ -12,8 +12,8 @@ export enum ItemConfigPillEffectClass {
   MAJOR,
 
   /**
-   * This is not a real `ItemConfigPillEffectClass`. Due to limitations in the API, getting the
-   * real class of modded pill effects is not possible, so this value is returned instead.
+   * This is not a real `ItemConfigPillEffectClass`. Due to limitations in the API, getting the real
+   * class of modded pill effects is not possible, so this value is returned instead.
    */
   MODDED,
 }

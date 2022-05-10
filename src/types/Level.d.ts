@@ -114,8 +114,6 @@ declare global {
     GetRandomRoomIndex(IAmErrorRoom: boolean, seed: Seed): int;
 
     /**
-     *
-     *
      * @param roomGridIndex The grid index of the room to get.
      * @param dimension Default is `Dimension.CURRENT`.
      */
@@ -192,7 +190,9 @@ declare global {
 
     ShowName(sticky: boolean): void;
 
-    /** Uncovers the door on both sides by modifying the saved grid entities for neighboring room. */
+    /**
+     * Uncovers the door on both sides by modifying the saved grid entities for neighboring room.
+     */
     UncoverHiddenDoor(currentRoomIdx: int, doorSlot: DoorSlot): void;
 
     Update(): void;

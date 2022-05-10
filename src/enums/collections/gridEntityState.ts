@@ -17,8 +17,8 @@ export enum RockState {
   BROKEN = 2,
 
   /**
-   * Only applies for `GridEntityType.ROCK_BOMB` (5). After being bombed, the rock stays in
-   * this state for 4 frames, then changes to `RockState.BROKEN`.
+   * Only applies for `GridEntityType.ROCK_BOMB` (5). After being bombed, the rock stays in this
+   * state for 4 frames, then changes to `RockState.BROKEN`.
    */
   EXPLODING = 3,
 
@@ -71,8 +71,8 @@ export enum TNTState {
 /**
  * For GridEntityType.POOP (14)
  *
- * The health of a poop is represented by its state. It starts at 0 and climbs upwards in
- * increments of 250. Once the state reaches 1000, the poop is completely broken.
+ * The health of a poop is represented by its state. It starts at 0 and climbs upwards in increments
+ * of 250. Once the state reaches 1000, the poop is completely broken.
  *
  * Breaking a poop usually takes 4 tears. However, it is possible to take less than that if the
  * players damage is high enough. (High damage causes the tear to do two or more increments at

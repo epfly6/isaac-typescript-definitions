@@ -36,8 +36,11 @@ declare global {
     EndPoint: Vector;
     FirstUpdate: boolean;
     GridHit: boolean;
-    // HomingLaser: HomingLaser; // HomingLaser is not implemented
-    // HomingType: LaserHomingType; // LaserHomingType is not implemented
+
+    // HomingLaser is not implemented
+
+    // HomingType is not implemented
+
     IsActiveRotating: boolean;
     LaserLength: float;
     LastAngleDegrees: float;
@@ -48,7 +51,9 @@ declare global {
     RotationDegrees: float;
     RotationDelay: int;
     RotationSpd: float;
-    // SampleLaser: boolean; // Should use IsSampleLaser() instead
+
+    // SampleLaser is not implemented; use `EntityLaser.IsSampleLaser` instead
+
     Shrink: boolean;
     StartAngleDegrees: float;
     TearFlags: BitFlags<TearFlag>;

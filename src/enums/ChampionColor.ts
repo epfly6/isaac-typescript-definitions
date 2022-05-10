@@ -37,6 +37,7 @@ export enum ChampionColor {
 
   /**
    * Collapses into a flesh pile upon death and regenerates if not finished off.
+   *
    * Drops a double heart.
    */
   DARK_RED = 12,
@@ -46,6 +47,7 @@ export enum ChampionColor {
 
   /**
    * The enemy blends into the background and briefly becomes visible when damaged.
+   *
    * Drops a rune.
    */
   CAMO = 14,
@@ -71,6 +73,7 @@ export enum ChampionColor {
   /**
    * Spawns an Attack Fly on hit. After each hit, there is a delay until the next hit results in
    * another Attack Fly. A single Pulsating enemy can have up to 5 Attack Flies at once.
+   *
    * Spawns 4-6 blue flies on death.
    */
   SIZE_PULSE = 21,
@@ -78,12 +81,14 @@ export enum ChampionColor {
   /**
    * 3x HP. All enemies in the room that are not champions will turn yellow while the crowned enemy
    * is alive. The affected enemies will drop batteries like yellow champions upon dying.
+   *
    * Drops 2-3 random pickups.
    */
   KING = 22,
 
   /**
    * Does 2 hearts of damage when touched. Produces a Necronomicon effect upon death.
+   *
    * Deals two full hearts of damage.
    */
   DEATH = 23,

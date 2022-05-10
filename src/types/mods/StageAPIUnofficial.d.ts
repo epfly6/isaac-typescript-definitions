@@ -206,21 +206,21 @@ declare global {
     PRE_CHANGE_ROOM_GFX = "PRE_CHANGE_ROOM_GFX",
 
     /**
-     * Takes 1 return value. If a table, uses it as the current room layout.
-     * Otherwise, chooses from `roomsList` with seeded RNG. Breaks on first return.
+     * Takes 1 return value. If a table, uses it as the current room layout. Otherwise, chooses from
+     * `roomsList` with seeded RNG. Breaks on first return.
      *
      * Called both on initial room load and when continuing game, before INIT.
      */
     PRE_ROOM_LAYOUT_CHOOSE = "PRE_ROOM_LAYOUT_CHOOSE",
 
     /**
-     * Takes 4 return values, AddEntities, EntityList, StillAddRandom, and NoBreak.
-     * If the first value is false, cancels selecting the list.
-     * AddEntities and EntityList are lists of EntityData tables, described below.
-     * Usually StageAPI will pick one entity from the EntityList to add to the AddEntities table at
-     * random, but that can be changed with this callback.
-     * If StillAddRandom is true, StageAPI will still add a random entity from the entityList to
-     * addEntities, alongside ones you returned.
+     * - Takes 4 return values, AddEntities, EntityList, StillAddRandom, and NoBreak.
+     * - If the first value is false, cancels selecting the list.
+     * - AddEntities and EntityList are lists of EntityData tables, described below.
+     * - Usually StageAPI will pick one entity from the EntityList to add to the AddEntities table
+     *   at random, but that can be changed with this callback.
+     * - If StillAddRandom is true, StageAPI will still add a random entity from the entityList to
+     *   addEntities, alongside ones you returned.
      */
     PRE_SELECT_ENTITY_LIST = "PRE_SELECT_ENTITY_LIST",
 
@@ -248,8 +248,8 @@ declare global {
     PRE_SPAWN_ENTITY_LIST = "PRE_SPAWN_ENTITY_LIST",
 
     /**
-     * Takes 1 return value. If `false`, cancels spawning the grid.
-     * If a table, uses it as the grid data.
+     * Takes 1 return value. If `false`, cancels spawning the grid. If a table, uses it as the grid
+     * data.
      *
      * Any return value breaks out of future callbacks.
      */

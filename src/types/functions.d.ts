@@ -26,6 +26,7 @@ declare function Random(this: void): int;
 
 /**
  * Returns a random vector between (-1, -1) and (1, 1).
- * Multiply this vector by a number for larger random vectors.
+ *
+ * For larger random vectors, multiply this with a number.
  */
 declare function RandomVector(this: void): Vector;

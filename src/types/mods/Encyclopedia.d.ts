@@ -108,16 +108,15 @@ declare global {
   }
 
   /**
-   * Contains Encyclopedia's custom item pool system.
-   * It uses custom item pools in order to allow better compatibility with modded pools.
-   * The same as the ItemPoolType enum, but every pool is 1 value higher,
-   * "to handle table indices better".
+   * Contains Encyclopedia's custom item pool system. It uses custom item pools in order to allow
+   * better compatibility with modded pools. The same as the ItemPoolType enum, but every pool is 1
+   * value higher, "to handle table indices better".
    */
   type EncyclopediaItemPools = Record<string, number>;
 
   /**
-   * A description for an item. Each object in the array is a category,
-   * containing a header and as many paragraphs as are needed.
+   * A description for an item. Each object in the array is a category, containing a header and as
+   * many paragraphs as are needed.
    */
   type EncyclopediaWikiDescription = [
     {
@@ -135,9 +134,7 @@ declare global {
     },
   ];
 
-  /**
-   * Encyclopedia's 'General Item Variables' object. Used to store data about an item.
-   */
+  /** Encyclopedia's "General Item Variables" object. Used to store data about an item. */
   interface EncyclopediaItemVars {
     CloseFunc(vars: EncyclopediaItemVars): void;
     StatusFunc(vars: EncyclopediaItemVars): EncyclopediaItemVars;

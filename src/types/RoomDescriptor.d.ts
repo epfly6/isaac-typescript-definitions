@@ -24,13 +24,13 @@ declare global {
      * - For a 1x1 room, this is equal to the 1x1 grid index of the room.
      * - For a room bigger than a 1x1 room, this is equal to the top left 1x1 quadrant.
      * - For `RoomShape.LTL` rooms (i.e. rooms that look like a "J"), this is equal to the 1x1
-     * quadrant where the gap in the room is. In other words, it is a 1x1 quadrant that is not
-     * actually contained within the room.
+     *   quadrant where the gap in the room is. In other words, it is a 1x1 quadrant that is not
+     *   actually contained within the room.
      * - Note that this value **is different** than the value returned by
-     * `Level.GetCurrentRoomIndex()`. (That function returns the 1x1 quadrant that the room was
-     * entered in.)
+     *   `Level.GetCurrentRoomIndex()`. (That function returns the 1x1 quadrant that the room was
+     *   entered in.)
      * - Data structures that store data per room should use `ListIndex` as a key instead of
-     * `GridIndex`, since the former is unique across different dimensions.
+     *   `GridIndex`, since the former is unique across different dimensions.
      */
     GridIndex: int;
 
@@ -56,12 +56,12 @@ declare global {
      * - For a 1x1 room, this is equal to the 1x1 grid index of the room.
      * - For a room bigger than a 1x1 room, this is equal to the top left 1x1 quadrant.
      * - For `RoomType.LTL` rooms (i.e. rooms that look like a "J"), this is equal to the top right
-     * 1x1 quadrant.
+     *   1x1 quadrant.
      * - Note that this value **is different** than the value returned by
-     * `Level.GetCurrentRoomIndex()`. (That function returns the 1x1 quadrant that the room was
-     * entered in.)
+     *   `Level.GetCurrentRoomIndex()`. (That function returns the 1x1 quadrant that the room was
+     *   entered in.)
      * - Data structures that store data per room should use `ListIndex` as a key instead of
-     * `SafeGridIndex`, since the former is unique across different dimensions.
+     *   `SafeGridIndex`, since the former is unique across different dimensions.
      */
     SafeGridIndex: int;
 

@@ -71,8 +71,8 @@ declare global {
     /**
      * Indicates that this stage overrides alt rock effects.
      *
-     * @param rooms If present, only overrides rock alt effects for the specified
-     * {@link RoomType RoomTypes}. If absent, overrides alt rocks everywhere.
+     * @param rooms If present, only overrides rock alt effects for the specified RoomTypes. If
+     * absent, overrides alt rocks everywhere.
      *
      * DOES NOT add any new effects on its own.
      */
@@ -127,8 +127,8 @@ declare global {
     SetRooms(roomsList: StageAPIRoomsList): void;
 
     /**
-     * Sets the paths to the "spot" graphic,
-     * the patch of ground underneath the boss and player sprites in the pre-boss cutscene.
+     * Sets the paths to the "spot" graphic, the patch of ground underneath the boss, and player
+     * sprites in the pre-boss cutscene.
      */
     SetSpots(
       bossSpot: string | undefined,

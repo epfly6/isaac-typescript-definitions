@@ -1,7 +1,9 @@
 /**
  * The type of a grid entity as represented in a room XML/STB file.
+ *
  * This is converted by the game to the GridEntityType enum.
- * The `gridspawn` console command accepts GridEntityXMLType instead of GridEntityType.
+ *
+ * The `gridspawn` console command accepts `GridEntityXMLType` instead of `GridEntityType`.
  */
 export enum GridEntityXMLType {
   ROCK = 1000,

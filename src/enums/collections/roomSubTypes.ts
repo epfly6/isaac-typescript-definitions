@@ -39,6 +39,7 @@ export enum TreasureRoomSubType {
  * For StageID.SPECIAL_ROOMS (0), RoomType.ROOM_BOSS (5)
  *
  * This matches the sub-type in the "00.special rooms.stb" file.
+ *
  * The enum is named this way to match the `Entity.GetBossID`, `Room.GetBossID` and
  * `Room.GetSecondBossID` methods.
  */
@@ -169,6 +170,7 @@ export enum BossID {
  * For StageID.SPECIAL_ROOMS (0), RoomType.ROOM_MINIBOSS (6)
  *
  * This matches the sub-type in the "00.special rooms.stb" file.
+ *
  * The enum is named this way to match the `BossID` enum.
  */
 export enum MinibossID {

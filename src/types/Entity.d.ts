@@ -29,8 +29,7 @@ declare global {
     BloodExplode(): void;
 
     // CanShutDoors is deliberately not implemented here because it conflicts with
-    // EntityNPC.CanShutDoors
-    // CanShutDoors(): boolean;
+    // `EntityNPC.CanShutDoors`
 
     ClearEntityFlags(entityFlags: EntityFlag | BitFlags<EntityFlag>): void;
     CollidesWithGrid(): boolean;
@@ -134,8 +133,8 @@ declare global {
     /**
      * The color of the gibs when an entity dies.
      *
-     * Thus property is read only, so if you want to change it, you have to replace the entire
-     * thing with a new Color object.
+     * Thus property is read only, so if you want to change it, you have to replace the entire thing
+     * with a new Color object.
      */
     SplatColor: Readonly<Color>;
 

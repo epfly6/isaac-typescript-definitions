@@ -21,9 +21,10 @@ declare global {
      * @param ignoreWalls Default is false.
      * @param ignoreCrushable Default is false.
      * @returns 2 values:
-     * 1) boolean: true if there are no obstructions between Pos1 and Pos2, false otherwise
-     * 2) Vector: first hit position from pos1 to pos2 (returns pos2 if the line didn't hit
-     * anything)
+     * - boolean - true if there are no obstructions between `position` and `position2`, false
+     *   otherwise.
+     * - Vector - The first hit position from `position1` to `position2`. Returns `position2` if the
+     *   line didn't hit anything.
      */
     CheckLine(
       position1: Vector,
@@ -78,8 +79,8 @@ declare global {
     GetEnemyDamageInflicted(): int;
 
     /**
-     * Using this method can cause the game to crash, so it is forbidden.
-     * Use "Isaac.GetRoomEntities()" instead.
+     * Using this method can cause the game to crash, so it is forbidden. Use
+     * "Isaac.GetRoomEntities()" instead.
      */
     GetEntities(fakeArg: never): EntityList;
 
@@ -108,8 +109,9 @@ declare global {
 
     GetLightingAlpha(): float;
 
-    // GetLRoomAreaDesc(): LRoomAreaDesc; // LRoomAreaDesc is not implemented
-    // GetLRoomTileDesc(): LRoomTileDesc; // LRoomTileDesc is not implemented
+    // GetLRoomAreaDesc is not implemented
+
+    // GetLRoomTileDesc is not implemented
 
     GetNextShockwaveId(): int;
     GetRandomPosition(margin: float): Vector;
@@ -162,15 +164,15 @@ declare global {
      * doors as brown and invalid doors as white.) The value returned by this method is independent
      * of whether or not a door currently exists at the given slot.
      *
-     * For example, in the starting room of a floor, this method would return true for
-     * `DoorSlot.LEFT0`, `DoorSlot.UP0`, `DoorSlot.RIGHT0`, and `DoorSlot.DOWN0`, and false for all
-     * other values (regardless of what doors happen to exist or not).
+     * For example, in the starting room of a floor (i.e. a 1x1 room), this method would return true
+     * for `DoorSlot.LEFT_0`, `DoorSlot.UP_0`, `DoorSlot.RIGHT_0`, and `DoorSlot.DOWN_0`, and false
+     * for all other values (regardless of what doors happen to exist or not).
      *
      * For example, there is a relatively common 1x1 room in the Caves with 4 Boom Flies and a
      * narrow bridge from the top door to the bottom door. In this room, the doors on the left side
      * and the right side are disabled. In this room, this method would return true for
-     * `DoorSlot.UP0` and `DoorSlot.DOWN0`, and false for all other values (regardless of what
-     * doors happen to exist or not).
+     * `DoorSlot.UP0` and `DoorSlot.DOWN0`, and false for all other values (regardless of what doors
+     * happen to exist or not).
      */
     IsDoorSlotAllowed(doorSlot: DoorSlot): boolean;
 

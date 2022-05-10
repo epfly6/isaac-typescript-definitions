@@ -39,8 +39,7 @@ declare interface Vector {
   /** Use the "sub()" method instead. */
   __sub(right: never): Vector;
 
-  // Not implemented since it can cause the game to crash
-  // __unm(right: never): Vector;
+  // __unm is not implemented since it can cause the game to crash
 
   X: float;
   Y: float;

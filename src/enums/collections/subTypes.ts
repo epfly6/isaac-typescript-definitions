@@ -178,7 +178,10 @@ export enum BabySubType {
 }
 
 /** For EntityType.FAMILIAR (3), FamiliarVariant.BLUE_FLY (43) */
-export enum LocustSubType {
+export enum BlueFlySubType {
+  /** A standard fly, like what you get from using Guppy's Head. */
+  BLUE_FLY = 0,
+
   /** Red (explosive) */
   WRATH = 1,
 
@@ -237,6 +240,9 @@ export enum PickupNullSubType {
 
 /** For EntityType.PICKUP (5), PickupVariant.PICKUP_HEART (10) */
 export enum HeartSubType {
+  /** Spawning hearts with this sub-type will produce a random heart. */
+  NULL = 0,
+
   FULL = 1,
   HALF = 2,
   SOUL = 3,
@@ -253,6 +259,9 @@ export enum HeartSubType {
 
 /** For EntityType.PICKUP (5), PickupVariant.PICKUP_COIN (20) */
 export enum CoinSubType {
+  /** Spawning coins with this sub-type will produce a random coin. */
+  NULL = 0,
+
   PENNY = 1,
   NICKEL = 2,
   DIME = 3,
@@ -264,6 +273,9 @@ export enum CoinSubType {
 
 /** For EntityType.PICKUP (5), For PickupVariant.PICKUP_KEY (30) */
 export enum KeySubType {
+  /** Spawning keys with this sub-type will produce a random key. */
+  NULL = 0,
+
   NORMAL = 1,
   GOLDEN = 2,
   DOUBLE_PACK = 3,
@@ -272,6 +284,9 @@ export enum KeySubType {
 
 /** For EntityType.PICKUP (5), PickupVariant.PICKUP_BOMB (40) */
 export enum BombSubType {
+  /** Spawning bombs with this sub-type will produce a random bomb. */
+  NULL = 0,
+
   NORMAL = 1,
   DOUBLE_PACK = 2,
   TROLL = 3,
@@ -284,22 +299,25 @@ export enum BombSubType {
 /** For EntityType.PICKUP (5), PickupVariant.PICKUP_POOP (42) */
 export enum PoopPickupSubType {
   /** Equal to "Poop Nugget" in "entities2.xml". */
-  POOP_SMALL = 0,
+  SMALL = 0,
 
   /** Equal to "Big Poop Nugget" in "entities2.xml". */
-  POOP_BIG = 1,
+  BIG = 1,
 }
 
 /** For EntityType.PICKUP (5), PickupVariant.PICKUP_CHEST (50) */
 export enum ChestSubType {
-  CHEST_OPENED = 0,
-  CHEST_CLOSED = 1,
+  OPENED = 0,
+  CLOSED = 1,
 }
 
 /** For EntityType.PICKUP (5), PickupVariant.PICKUP_GRAB_BAG (69) */
 export enum SackSubType {
-  SACK_NORMAL = 1,
-  SACK_BLACK = 2,
+  /** Spawning sacks with this sub-type will produce a random sack. */
+  NULL = 0,
+
+  NORMAL = 1,
+  BLACK = 2,
 }
 
 /**
@@ -308,7 +326,9 @@ export enum SackSubType {
  * This is the sub-type of a pill.
  */
 export enum PillColor {
+  /** Spawning pills with this sub-type will produce a random pill. */
   NULL = 0,
+
   BLUE_BLUE = 1,
   WHITE_BLUE = 2,
   ORANGE_ORANGE = 3,
@@ -327,10 +347,13 @@ export enum PillColor {
 
 /** For EntityType.PICKUP (5), PickupVariant.PICKUP_LIL_BATTERY (90) */
 export enum BatterySubType {
-  BATTERY_NORMAL = 1,
-  BATTERY_MICRO = 2,
-  BATTERY_MEGA = 3,
-  BATTERY_GOLDEN = 4,
+  /** Spawning batteries with this sub-type will produce a random battery. */
+  NULL = 0,
+
+  NORMAL = 1,
+  MICRO = 2,
+  MEGA = 3,
+  GOLDEN = 4,
 }
 
 /**
@@ -339,7 +362,9 @@ export enum BatterySubType {
  * This is the sub-type of a collectible.
  */
 export enum CollectibleType {
+  /** Spawning collectibles with this sub-type will produce a random collectible. */
   NULL = 0,
+
   SAD_ONION = 1,
   INNER_EYE = 2,
   SPOON_BENDER = 3,
@@ -1069,7 +1094,9 @@ export enum CollectibleType {
  * This is the sub-type of a card.
  */
 export enum Card {
+  /** Spawning cards with this sub-type will produce a random card. */
   NULL = 0,
+
   FOOL = 1,
   MAGICIAN = 2,
   HIGH_PRIESTESS = 3,
@@ -1175,7 +1202,9 @@ export enum Card {
  * This is the sub-type of a trinket.
  */
 export enum TrinketType {
+  /** Spawning trinkets with this sub-type will produce a random trinket. */
   NULL = 0,
+
   SWALLOWED_PENNY = 1,
   PETRIFIED_POOP = 2,
   AAA_BATTERY = 3,
@@ -1398,9 +1427,10 @@ export enum ChargerSubType {
 }
 
 /**
- * For EntityType.CONSTANT_STONE_SHOOTER (202),
- * ConstantStoneShooterVariant.CONSTANT_STONE_SHOOTER (0)
- * (this is the same as the Direction enum)
+ * For EntityType.CONSTANT_STONE_SHOOTER (202), ConstantStoneShooterVariant.CONSTANT_STONE_SHOOTER
+ * (0)
+ *
+ * This is the same as the `Direction` enum.
  */
 export enum ConstantStoneShooterSubType {
   LEFT = 0,

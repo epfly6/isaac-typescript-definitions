@@ -76,11 +76,10 @@ declare global {
      * @param charge Default is 0.
      * @param firstTimePickingUp Setting this to false will not spawn or add consumables for the
      * item and will not cause it to count towards transformations. Default is true.
-     * @param activeSlot Sets the active slot this collectible should be added to.
-     * Default is `ActiveSlot.SLOT_PRIMARY`.
+     * @param activeSlot Sets the active slot this collectible should be added to. Default is
+     * `ActiveSlot.SLOT_PRIMARY`.
      * @param varData Sets the variable data for this collectible (this is used to store extra data
-     * for some active items like the number of uses for Jar of Wisps).
-     * Default is 0.
+     * for some active items like the number of uses for Jar of Wisps). Default is 0.
      */
     AddCollectible(
       collectibleType: CollectibleType | int,
@@ -94,7 +93,7 @@ declare global {
     AddCostume(itemConfigItem: ItemConfigItem, itemStateOnly: boolean): void;
 
     /**
-     * Disables all item effects similarly to the abandoned mineshaft in Mines II.
+     * Disables all item effects, similar to what happens in the abandoned mineshaft in Mines II.
      * This also temporarily removes consumables and pocket items.
      */
     AddCurseMistEffect(): void;
@@ -154,6 +153,7 @@ declare global {
 
     /**
      * Adds heart containers to the player. 2 units is a full heart container.
+     *
      * Remove them with negative numbers.
      */
     AddMaxHearts(maxHearts: int, ignoreKeeper: boolean): void;
@@ -178,8 +178,8 @@ declare global {
     /**
      * Remove them with negative numbers.
      *
-     * @param hearts Rotten hearts must be specified in a multiple of 2.
-     * For example, `AddRottenHearts(4)` will add 2 rotten hearts.
+     * @param hearts Rotten hearts must be specified in a multiple of 2. For example,
+     * `AddRottenHearts(4)` will add 2 rotten hearts.
      */
     AddRottenHearts(hearts: int): void;
 
@@ -195,7 +195,7 @@ declare global {
     /**
      * - If the player does not have any open trinket slots, this function will do nothing.
      * - If the player has an open trinket slot but already has a trinket, the new trinket will go
-     * to the first slot and the existing trinket will get pushed back to the second slot.
+     *   to the first slot and the existing trinket will get pushed back to the second slot.
      * - If you provide an argument of 0 or an otherwise invalid trinket ID, the game will crash.
      *
      * @param trinketType
@@ -228,8 +228,8 @@ declare global {
     ): EntityFamiliar;
 
     /**
-     * Play the animation that is normally played at the beginning of a stage.
-     * Also plays the associated sound effect.
+     * Play the animation that is normally played at the beginning of a stage. Also plays the
+     * associated sound effect.
      */
     AnimateAppear(): void;
 
@@ -286,8 +286,8 @@ declare global {
     AnimatePitfallOut(): void;
 
     /**
-     * Play the animation where Isaac holds his head in his hands.
-     * Also plays `SoundEffect.SOUND_THUMBS_DOWN`.
+     * Play the animation where Isaac holds his head in his hands. Also plays
+     * `SoundEffect.SOUND_THUMBS_DOWN`.
      */
     AnimateSad(): void;
 
@@ -352,9 +352,9 @@ declare global {
      * Spawns the appropriate amount of familiars associated with a custom collectible.
      *
      * - If the target count specified is less than the current amount of familiars, it will spawn
-     * more until the target count is met.
+     *   more until the target count is met.
      * - If the target count specified is than the current amount of familiars, it will despawn
-     * familiars until the target count is met.
+     *   familiars until the target count is met.
      *
      * Note that this function is bugged in that it will not increment the provided RNG. This is bad
      * because if you provide the player's collectible RNG as the argument for `rng`, all of the
@@ -668,7 +668,7 @@ declare global {
      *
      * - Usually, this will return 1.
      * - If the player has Belly Button, Starter Deck, or Little Baggy, it will increment the number
-     * by 1.
+     *   by 1.
      * - If the player has a pocket active item, it will increment the number by 1.
      * - If the player has a dice from the Dice Bag trinket, it will increment the number by 1.
      * - The maximum number this can return is 4.
@@ -714,8 +714,8 @@ declare global {
 
     /**
      * Normally, this function returns the player. However, in some cases, NPCs can be redirected to
-     * attack another target, in which case this function will return the alternate target
-     * (e.g. after using Best Friend).
+     * attack another target, in which case this function will return the alternate target (e.g.
+     * after using Best Friend).
      */
     GetNPCTarget(): Entity;
 
@@ -750,7 +750,7 @@ declare global {
     GetPillRNG(pillEffect: PillEffect | int): RNG;
     GetPlayerType(): PlayerType | int;
 
-    // GetPocketItem(slotID: int): Readonly<PlayerPocketItem>; // PlayerPocketItem is not implemented
+    // GetPocketItem is not implemented
 
     /** Returns how many poop consumables the player is currently holding. */
     GetPoopMana(): int;
@@ -765,8 +765,10 @@ declare global {
     GetRecentMovementVector(): Readonly<Vector>;
 
     /**
-     * This returns the actual number of rotten hearts.
-     * (For example, this returns 2 if the player has 2 rotten hearts.)
+     * This returns the number of rotten hearts.
+     *
+     * Unlike other heart functions, it returns the actual number of rotten hearts. For example,
+     * this returns 2 if the player has 2 rotten hearts.
      */
     GetRottenHearts(): int;
 
@@ -782,6 +784,7 @@ declare global {
 
     /**
      * 1 unit is half a heart. Black hearts count toward this total.
+     *
      * Remove them with negative numbers.
      */
     GetSoulHearts(): int;
@@ -791,7 +794,7 @@ declare global {
      * - When on The Soul, returns the sub-player object for The Forgotten.
      * - Otherwise, returns undefined.
      * - This will always return undefined if you call it on a sub-player. To get the "parent"
-     * player, use the `getSubPlayerParent` helper function.
+     *   player, use the `getSubPlayerParent` helper function.
      */
     GetSubPlayer(): EntitySubPlayer | undefined;
 
@@ -821,6 +824,7 @@ declare global {
 
     /**
      * This is the number of times that the trinket effect is applied.
+     *
      * Returns 0 if the player does not have the particular trinket.
      */
     GetTrinketMultiplier(trinketType: TrinketType | int): int;
@@ -933,8 +937,8 @@ declare global {
      * @param collectibleType
      * @param ignoreModifiers Ignores collectible effects granted by other items (i.e. Void).
      * Default is false.
-     * @param activeSlot Sets the active slot this collectible should be removed from.
-     * Default is `ActiveSlot.SLOT_PRIMARY`.
+     * @param activeSlot Sets the active slot this collectible should be removed from. Default is
+     * `ActiveSlot.SLOT_PRIMARY`.
      * @param removeFromPlayerForm If successfully removed and part of a transformation, decrease
      * that transformation's counter by 1. Default is true.
      */
@@ -948,8 +952,8 @@ declare global {
     RemoveCostume(itemConfigItem: ItemConfigItem): void;
 
     /**
-     * Re-enables item effects removed by AddCurseMistEffect().
-     * Also attempts to restore consumables and pocket items removed by AddCurseMistEffect().
+     * Re-enables item effects, consumables, and pocket items removed by
+     * `EntityPlayer.AddCurseMistEffect`.
      */
     RemoveCurseMistEffect(): void;
 
@@ -991,7 +995,8 @@ declare global {
 
     /**
      * Sets the player's pocket active item to the given active item.
-     * Items added to SLOT_POCKET2 will always be removed upon being used.
+     *
+     * Items added to `ActiveSlot.POCKET_2` will always be removed upon being used.
      *
      * @param collectibleType
      * @param slot Can be either ActiveSlot.SLOT_POCKET or ActiveSlot.SLOT_POCKET2. Default is
@@ -1056,6 +1061,7 @@ declare global {
 
     /**
      * Attempts to pick up the given entity, returns true on success.
+     *
      * Currently only works with some entity types (mainly bombs and enemies).
      */
     TryHoldEntity(entity: Entity): boolean;
@@ -1099,9 +1105,8 @@ declare global {
     /**
      * @param collectibleType
      * @param useFlag Default is 0.
-     * @param activeSlot The active slot this item was used from.
-     * (Set to -1 if this item wasn't triggered by any active slot.)
-     * Default is `ActiveSlot.SLOT_PRIMARY`.
+     * @param activeSlot The active slot this item was used from. (Set to -1 if this item was not
+     * triggered by any active slot.) Default is `ActiveSlot.SLOT_PRIMARY`.
      */
     UseActiveItem(
       collectibleType: CollectibleType | int,
@@ -1115,9 +1120,8 @@ declare global {
      * @param keepActiveItem
      * @param allowNonMainPlayer
      * @param toAddCostume
-     * @param activeSlot The active slot this item was used from.
-     * (Set to -1 if this item wasn't triggered by any active slot.)
-     * Default is `ActiveSlot.SLOT_PRIMARY`.
+     * @param activeSlot The active slot this item was used from. (Set to -1 if this item was not
+     * triggered by any active slot.) Default is `ActiveSlot.SLOT_PRIMARY`.
      */
     UseActiveItem(
       collectibleType: CollectibleType | int,

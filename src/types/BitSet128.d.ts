@@ -5,11 +5,22 @@ declare function BitSet128(this: void, l: int, h: int): BitSet128;
  * C++ uses 128-bit numbers for certain things.
  */
 declare interface BitSet128 {
-  // These are used to transpile:
-  // tearFlags.bor(TearFlag.TEAR_SPECTRAL)
-  // to:
-  // tearFlags | TearFlag.TEAR_SPECTRAL
-  // https://typescripttolua.github.io/docs/advanced/language-extensions/#operator-map-types
+  /**
+   * These methods are used to transpile:
+   *
+   * ```ts
+   * tearFlags.bor(TearFlag.TEAR_SPECTRAL)
+   * ```
+   *
+   * to:
+   *
+   * ```lua
+   * tearFlags | TearFlag.TEAR_SPECTRAL
+   * ```
+   *
+   * https://typescripttolua.github.io/docs/advanced/language-extensions/#operator-map-types
+   */
+
   band: LuaBitwiseAndMethod<BitSet128, BitSet128>;
   bnot: LuaBitwiseNotMethod<BitSet128>;
   bor: LuaBitwiseOrMethod<BitSet128, BitSet128>;

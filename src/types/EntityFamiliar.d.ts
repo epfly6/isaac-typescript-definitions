@@ -20,11 +20,11 @@ declare global {
      * @param maxDistance
      * @param frameInterval Default is 13.
      * @param flags Default is 0. See the `TargetFlag` enum for more information.
-     * @param coneDir Default is `Vector.Zero`.
-     * If ~= Vector.Zero, searches for targets in a cone pointing in this direction.
-     * @param coneAngle Default is 15.
-     * If ConeDir ~= Vector.Zero, sets the half angle of the search cone in degrees
-     * (45 results in a search angle of 90 degrees).
+     * @param coneDir Default is `Vector(0, 0)`. If not equal to a zero vector, the function will
+     * search for targets in a cone pointing in this direction.
+     * @param coneAngle Default is 15. If `coneDir` is not a zero vector, the function will set the
+     * half angle of the search cone in degrees. (For example, 45 results in a search angle of 90
+     * degrees.)
      */
     PickEnemyTarget(
       maxDistance: float,

@@ -77,8 +77,8 @@ const EntityFlagInternal = {
   LASER_POP: 1 << 19,
 
   /**
-   * This shares the same value as `FLAG_NO_SPIKE_DAMAGE` and `FLAG_LASER_POP`, but has a
-   * different meaning depending on the entity type.
+   * This shares the same value as `FLAG_NO_SPIKE_DAMAGE` and `FLAG_LASER_POP`, but has a different
+   * meaning depending on the entity type.
    *
    * 1 << 19
    */

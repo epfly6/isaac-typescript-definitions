@@ -209,8 +209,8 @@ declare global {
       stageType: StageType,
     ): void;
     /**
-     * Stores a function and its params in a table indexed by `ID` and sorted by `priority`,
-     * where low priority is at the start.
+     * Stores a function and its params in a table indexed by `ID` and sorted by `priority`, where
+     * low priority is at the start.
      */
     AddCallback<T extends StageAPICallback>(
       modID: string,
@@ -340,7 +340,7 @@ declare global {
 
     GetCurrentRoomType(): RoomType;
 
-    /** Gets the current custom stage.  */
+    /** Gets the current custom stage. */
     GetCurrentStage(): StageAPICustomStage | undefined;
 
     GetCurrentStageDisplayName(): string;

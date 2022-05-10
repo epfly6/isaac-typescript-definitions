@@ -26,9 +26,9 @@ export enum ProjectilesMode {
   EIGHT_PROJECTILES_STAR_PATTERN = 8,
 
   /**
-   * Uses velocity.X as speed.
-   * Uses velocity.y as N.
-   * To fire in an arc, use params.FireDirectionLimit and params.DotProductLimit.
+   * - Uses `velocity.X` as speed.
+   * - Uses `velocity.Y` as N.
+   * - To fire in an arc, use params.FireDirectionLimit and params.DotProductLimit.
    */
   N_PROJECTILES_IN_CIRCLE = 9,
 }

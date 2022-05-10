@@ -28,6 +28,7 @@ export enum DaddyLongLegsState {
 
   /**
    * This is used for both the single stomp attack and the multi-stomp attack.
+   *
    * When doing the multi-stomp attack, the main entity will go to state 9 and the child entities
    * will have state 7.
    */

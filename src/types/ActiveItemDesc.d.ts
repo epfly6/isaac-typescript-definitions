@@ -11,7 +11,8 @@ declare global {
 
     /**
      * Number of frames before an item with a timed cooldown can recharge again.
-     * (Used by Spin To Win to pause its recharge after fully discharging it.)
+     *
+     * This is used by Spin To Win to pause its recharge after fully discharging it.
      */
     TimedRechargeCooldown: int;
 
