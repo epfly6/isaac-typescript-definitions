@@ -161,7 +161,8 @@ declare const enum BossID {
 
   HORNY_BOYS = 101,
 
-  POSSESSOR = 102,
+  /** In the "00.special rooms.stb" file, the room names are listed as "The Possessor" instead of "Clutch". */
+  CLUTCH = 102,
 }
 
 /**
